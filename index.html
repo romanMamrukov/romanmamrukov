@@ -16,18 +16,44 @@
     <nav>
       <div class="container">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
     </nav>
 
-    <div class="container main-content">
-      <h2>Welcome to the Website</h2>
-      <p>This is a sample personal website.</p>
+    <div class="container main-content" id="home">
+      <h2>Welcome to Your Website</h2>
+      <p>
+        This is a sample website template that you can customize for your needs.
+      </p>
     </div>
+
+    <div class="container main-content" id="about">
+      <h2>About Us</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+
+    <div class="container main-content" id="projects">
+      <h2>Projects</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+
+    <div class="container main-content" id="blog">
+      <h2>Blog</h2>
+      <p>Check out our latest blog posts.</p>
+    </div>
+
+    <div class="container main-content" id="contact">
+      <h2>Contact Us</h2>
+      <p>Get in touch with us.</p>
+    </div>
+
+    <button id="back-to-top" onclick="scrollToTop()">Back to Top</button>
+
+    <script src="script.js"></script>
   </body>
 </html>
