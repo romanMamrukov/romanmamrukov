@@ -4,12 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Website Title</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/plain.css" id="themeStyles" />
+    <!-- Add more themes as needed -->
+    <link rel="stylesheet" href="styles/style.css" disabled/>
+    <link rel="stylesheet" href="styles/minimal.css" disabled/>
+    <link rel="stylesheet" href="styles/dark.css" disabled />
+    <link rel="stylesheet" href="styles/modern.css" disabled />
   </head>
   <body>
     <header>
       <div class="container" id="top">
         <h1>Website</h1>
+        <!-- Add a dropdown menu for theme selection -->
+        <div class="theme-dropdown">
+        <label for="themeSelector">Select Theme: </label>
+        <select id="themeSelector" onchange="changeTheme(this.value)">
+          <option value="plain">Plain</option>
+          <option value="style">Default</option>
+          <option value="dark">Dark</option>
+          <option value="minimal">Minimal</option>
+          <option value="modern">Modern</option>
+          <!-- Add more themes as needed -->
+        </select>
+      </div>
       </div>
     </header>
 
@@ -30,7 +47,7 @@
       <h1>Welcome to </h1>
       <h2>Romans Mamrukovs</h2> 
       <h1>Website</h1>
-            <h3>IT Technician - Technical Specialist</h3>
+            <h3>Technical Specialist | Developer | Artist</h3>
             
         </div>
     </div>
@@ -41,10 +58,13 @@
       <h2>About</h2>
       <br>
       <p>
-        I am Romans Mamrukovs, an IT Technician and Technical Specialist with a passion for solving technical challenges and providing top-notch support to both the public and business sectors. With a background in software and hardware support, networking, security, and a strong foundation in IT operations, I am well-equipped to address a wide range of technical issues. My journey in the world of IT has spanned several roles and diverse experiences, shaping me into a versatile and adaptable professional. In my spare time I'm interested to learn and do websites, 3D graphics and games, software projects, work on my business and help others to improve their.
+        I am Romans Mamrukovs, a Technical Specialist with a passion for solving technical challenges and providing top-notch support to both the public and business sectors. With a background in software and hardware support, networking, security, and a strong foundation in IT operations, I am well-equipped to address a wide range of technical issues. My journey in the world of IT has spanned several roles and diverse experiences, shaping me into a versatile and adaptable professional. In my spare I do websites, 3D graphics and games, software projects, work on various business ideas and help others to improve theirs.
       </p>
       <br>
-      <h3>Work Experience</h3>
+      <h2 class="accordion">Work Experience</h2>
+      <!--Work exp accordion-->
+      <div class="panel">
+      <br>
       <p>
           - At <strong>Kin+Carta</strong>, I served as a Match Day Support Executive and 2nd Line Support Specialist. I played a pivotal role in ensuring the seamless execution of EFL events, offering technical support, maintaining EFL websites, and optimizing service delivery for EFL-related activities.
       </p>
@@ -60,14 +80,18 @@
       <p>
           - As an IT Support Technician at <strong>SimplyFixIT</strong>, I excelled in delivering exceptional customer technical support, resolving issues across various channels, and assisting clients in selecting the right repair service or devices.
       </p>
+      </div>
       <br>
-      <h2>Education</h2>
+      <h2 class="accordion">Education</h2>
+      <div class="panel">
       <br>
       <p>
           I hold a Bachelor's Degree in Computer Games and Programming Skills from Edinburgh Napier University, where I honed my skills and participated in events like the Global Game Jam.
       </p>
+      </div>
       <br>
-      <h2>Certifications</h2>
+      <h2 class="accordion">Certifications</h2>
+      <div class="panel">
       <ul>
           <li>Introduction to Computer Science (SIA Progmeistars)</li>
           <li>Technical Support Fundamentals (Coursera)</li>
@@ -75,8 +99,10 @@
           <li>The Bits and Bytes of Computer Networking (Coursera)</li>
           <li>IT Security: Defense against the digital dark arts (Coursera)</li>
       </ul>
-
-      <h2>Skills</h2>
+      </div>
+      <br>
+      <h2 class="accordion">Skills</h2>
+      <div class="panel">
       <ul>
           <li>User Provisioning</li>
           <li>Technical Understanding</li>
@@ -87,6 +113,7 @@
           <li>Windows, Linux, MacOS</li>
           <li>IT Hardware Support</li>
       </ul>
+      </div>
     </div>
     </section>
 
@@ -237,5 +264,6 @@
     <button id="back-to-top" onclick="scrollToTop()">Back to Top</button>
 
     <script src="script.js"></script>
+    <script src="themes-switch.js"></script>
   </body>
 </html>
