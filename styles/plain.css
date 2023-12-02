@@ -18,8 +18,19 @@ body {
   padding: 4em 1em;
 }
 
+header {
+  background-color: #7aa6ce;
+  background-image: url('header.jpg');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  line-height: 1.2;
+  padding: 10vw 2em;
+  text-align: center;
+}
+
 h2 {
-  margin-top: 1em;
+  margin-top: 0.2em;
   padding-top: 1em;
 }
 
@@ -49,6 +60,12 @@ article {
 section {
   border-bottom: 1px solid silver;
 }
+
+.home-content h2 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
 .container {
   max-width: 960px;
   margin: 0 auto;
