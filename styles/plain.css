@@ -12,20 +12,19 @@ body {
   font-family: 'Arial', 'Helvetica', sans-serif;
   background-color: #f5f5f5;
   color: #566b78;
-  margin: 0 auto;
-  max-width: 50em;
   line-height: 1.5;
-  padding: 4em 1em;
 }
 
 header {
   background-color: #7aa6ce;
-  background-image: url('header.jpg');
-  background-position: center top;
+  background-image: url('../img/roman-banner.png');
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   line-height: 1.2;
-  padding: 10vw 2em;
+  margin: 0 !important;
+  max-width: none !important;
+  padding: 10vw 2em !important;
   text-align: center;
 }
 
@@ -67,7 +66,7 @@ section {
 }
 
 .container {
-  max-width: 960px;
+  max-width: 50em;
   margin: 0 auto;
   padding: 16px;
 }
