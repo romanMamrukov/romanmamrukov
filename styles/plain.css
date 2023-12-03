@@ -127,6 +127,37 @@ nav p {
   cursor: pointer;
 }
 
+.container-form {
+  text-align: center;
+}
+
+.col {
+  display: inline;
+}
+
+textarea {
+  width: 50%;
+}
+
+#socMedia {
+  text-align: center;
+  margin: 20px auto;
+  padding-left: 0;
+}
+
+#socMedia ul {
+  display: inline;
+}
+
+#socMedia li {
+  display: inline;
+  margin: 16px;
+}
+
+#socMedia a {
+  text-decoration: none;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .container {

@@ -98,50 +98,7 @@ nav p {
   padding: 10px;
 }
 
-/* Main Content Styles */
-.main-content {
-  background-color: #fff;
-  padding: 16px;
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
-
-/* Back to Top Button */
-#back-to-top {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #3b3b3b;
-  color: #ff6600;
-  border: none;
-  border-radius: 10%;
-  padding: 10px 15px;
-  cursor: pointer;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .container {
-    padding: 10px;
-  }
-
-  header h1 {
-    font-size: 24px;
-  }
-
-  nav ul {
-    text-align: center;
-  }
-
-  nav ul li {
-    display: block;
-    margin: 10px 0;
-  }
-}
-
 /* Accordion in Work Experience section */
-
 .accordion {
   background-color: #eee;
   color: #444;
@@ -295,4 +252,86 @@ nav p {
 #blog-posts,
 #contacts {
   margin-bottom: 20px;
+}
+
+/* Main Content Styles */
+.main-content {
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Back to Top Button */
+#back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #3b3b3b;
+  color: #ff6600;
+  border: none;
+  border-radius: 10%;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.container-form {
+  text-align: center;
+}
+
+.col {
+  display: inline;
+}
+
+textarea {
+  width: 50%;
+}
+
+#socMedia {
+  text-align: center;
+  margin: 20px auto;
+  padding-left: 0;
+}
+
+#socMedia ul {
+  display: inline;
+}
+
+#socMedia li {
+  display: inline;
+  margin: 16px;
+}
+
+#socMedia a {
+  text-decoration: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 24px;
+  }
+
+  nav ul {
+    text-align: center;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  #project-categories ul {
+    text-align: center;
+  }
+
+  #project-categories ul li {
+    display: block;
+    margin: 10px 0;
+  }
 }
