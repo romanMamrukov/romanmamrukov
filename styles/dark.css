@@ -9,15 +9,30 @@ p {
 
 /* Global Styles */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #333;
-  color: #fff;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  background-color: #000000;
+  color: #566b78;
+  line-height: 1.5;
 }
 
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 20px;
+.theme-dropdown {
+  background-color: #707070;
+  display: inline;
+  padding: 5px;
+  color: #9ab0be;
+}
+
+header {
+  background-color: #7aa6ce;
+  background-image: url('../img/roman-banner.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  line-height: 1.2;
+  margin: 0 !important;
+  max-width: none !important;
+  padding: 10vw 2em !important;
+  text-align: center;
 }
 
 /* Header Styles */
@@ -29,6 +44,21 @@ header {
 
 header h1 {
   font-size: 36px;
+}
+
+h2 {
+  margin-top: 0.2em;
+  padding-top: 1em;
+}
+
+h1,
+h2,
+strong {
+  color: #333;
+}
+
+a:hover {
+  color: #e81c4f;
 }
 
 /* Navigation Styles */
@@ -44,7 +74,7 @@ nav ul {
 
 nav ul li {
   display: inline;
-  margin-right: 20px;
+  padding: 16px;
 }
 
 nav a {
@@ -57,10 +87,21 @@ nav a:hover {
   color: #ff6600;
 }
 
+nav p {
+  text-align: center;
+  color: #ff6600;
+}
+
+.container {
+  max-width: 50em;
+  margin: 0 auto;
+  padding: 10px;
+}
+
 /* Main Content Styles */
 .main-content {
   background-color: #fff;
-  padding: 20px;
+  padding: 16px;
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
@@ -71,10 +112,10 @@ nav a:hover {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #333;
-  color: #fff;
+  background-color: #3b3b3b;
+  color: #ff6600;
   border: none;
-  border-radius: 50%;
+  border-radius: 10%;
   padding: 10px 15px;
   cursor: pointer;
 }
@@ -105,7 +146,7 @@ nav a:hover {
   background-color: #eee;
   color: #444;
   cursor: pointer;
-  padding: 10px;
+  padding: 8px;
   width: 100%;
   border: none;
   text-align: left;
@@ -115,7 +156,7 @@ nav a:hover {
 }
 .active,
 .accordion:hover {
-  background-color: #ccc;
+  background-color: #ff6600;
 }
 .panel {
   padding: 18px;
@@ -127,12 +168,23 @@ nav a:hover {
 /* Styles for Project Categories */
 #project-categories {
   background-color: #f5f5f5;
-  padding: 20px;
+  padding: 16px;
 }
 
 #project-categories h2 {
   text-align: center;
   font-size: 24px;
+}
+
+#project-categories ul {
+  text-align: center;
+}
+
+#project-categories ul li {
+  display: inline;
+  margin: 10px 0;
+  padding: 16px;
+  cursor: pointer;
 }
 
 .category {
@@ -195,7 +247,7 @@ nav a:hover {
   max-width: 800px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: left;
-  border: 2px solid #640303; /* Add border */
+  border: 2px solid #ff6600; /* Add border */
   border-radius: 10px; /* Add border radius for rounded corners */
   display: flex;
   flex-direction: column; /* Display content in a column layout */
@@ -206,10 +258,14 @@ nav a:hover {
   position: absolute;
   top: 10px;
   right: 10px;
-  font-size: 24px;
+  font-size: 28px;
   cursor: pointer;
   color: #000000;
   z-index: 1;
+}
+
+.close-button:hover {
+  color: #ff6600;
 }
 
 /* Add more styling as needed */
@@ -234,4 +290,9 @@ nav a:hover {
   width: 100%;
   height: 100%;
   background: transparent;
+}
+
+#blog-posts,
+#contacts {
+  margin-bottom: 20px;
 }

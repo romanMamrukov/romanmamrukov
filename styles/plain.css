@@ -65,12 +65,6 @@ section {
   padding-top: 0;
 }
 
-.container {
-  max-width: 50em;
-  margin: 0 auto;
-  padding: 16px;
-}
-
 nav ul {
   text-align: center;
 }
@@ -79,6 +73,25 @@ nav ul li {
   display: inline;
   margin: 10px 0;
   padding: 16px;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav p {
+  text-align: center;
+}
+
+.container {
+  max-width: 50em;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.theme-dropdown {
+  display: inline;
+  padding: 5px;
 }
 
 #project-categories ul {
@@ -98,6 +111,20 @@ nav ul li {
 
 .project-modal {
   margin-bottom: 3em;
+}
+
+/* Back to Top Button */
+#back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #9b9b9b;
+  color: #000000;
+  border: none;
+  border-radius: 10%;
+  padding: 10px 15px;
+  cursor: pointer;
 }
 
 /* Responsive Styles */

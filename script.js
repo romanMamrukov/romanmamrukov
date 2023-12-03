@@ -93,7 +93,7 @@ function openProjectModal(projectId) {
     const modal = document.getElementById(projectId + '-modal');
     if (modal) {
         modal.style.display = 'flex'; // Change to 'flex' for centering
-        document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+        // document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
     }
 }
 

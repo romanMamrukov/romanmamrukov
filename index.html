@@ -6,12 +6,10 @@
     <title>Website Title</title>
     <link rel="stylesheet" href="styles/plain.css" id="themeStyles" />
     <!-- Add more themes as needed -->
-    <link rel="stylesheet" href="styles/style.css" disabled />
-    <link rel="stylesheet" href="styles/minimal.css" disabled />
     <link rel="stylesheet" href="styles/dark.css" disabled />
-    <link rel="stylesheet" href="styles/modern.css" disabled />
   </head>
   <body>
+    <!-- Header Banner Section -->
     <header id="top">
       <br />
       <h1></h1>
@@ -21,6 +19,7 @@
       <h3 id="home">Technical Specialist | Developer | Artist</h3>
     </header>
 
+    <!-- Navigation Section -->
     <nav>
       <div class="container">
         <ul>
@@ -29,22 +28,21 @@
           <li><a href="#projects">Projects</a></li>
           <li><a href="#blog">Blog</a></li>
           <li><a href="#contact">Contact</a></li>
-          <!-- Add a dropdown menu for theme selection -->
-          <div class="theme-dropdown">
-            <label for="themeSelector">Select Theme: </label>
-            <select id="themeSelector" onchange="changeTheme(this.value)">
-              <option value="plain">Plain</option>
-              <option value="style">Default</option>
-              <option value="dark">Dark</option>
-              <option value="minimal">Minimal</option>
-              <option value="modern">Modern</option>
-              <!-- Add more themes as needed -->
-            </select>
-          </div>
+          <!-- Dropdown menu for theme selection -->
+          <li>
+            <div class="theme-dropdown">
+              <select id="themeSelector" onchange="changeTheme(this.value)">
+                <option value="plain">Select Theme:</option>
+                <option value="plain">Plain</option>
+                <option value="dark">Night</option>
+              </select>
+            </div>
+          </li>
         </ul>
       </div>
     </nav>
 
+    <!-- About|Work|Education|Certificats|Skills Section -->
     <div class="container main-content">
       <section id="about">
         <h2>About</h2>
@@ -206,6 +204,7 @@
       </section>
     </div>
 
+    <!-- Projects Section -->
     <section id="projects">
       <div class="container main-content">
         <h2>Projects</h2>
@@ -255,10 +254,11 @@
               />
               <p>
                 Tagrolat company required to show information about them and
-                thier product in the world wide web. i have build website from
+                thier product in the world wide web. I have build website from
                 ground up on Wix platform for easy of future maintaince.
                 Collected required information, translation, as well as assisted
-                with design and text creation
+                with design and text creation, setting up emails and teaching
+                how to use website and managing it.
               </p>
               <p>Author: Romans Mamrukovs</p>
               <p>
@@ -270,9 +270,14 @@
         </div>
 
         <div class="project-card" data-category="websites">
-          <img src="project2-image.jpg" alt="Project 2" />
-          <h3>Website Project 2</h3>
-          <p>Description of Project 2</p>
+          <img
+            src="img/whytePaints.png"
+            alt="WhytePaints"
+            width="250"
+            height="50"
+          />
+          <h3>WhytePaints Website</h3>
+          <p>Painting and decorationg company Website</p>
           <button class="more-button" onclick="openProjectModal('project2')">
             More
           </button>
@@ -282,47 +287,72 @@
         <div id="project2-modal" class="project-modal">
           <div class="project-modal-content">
             <article>
-              <h2>Website Project 2</h2>
+              <h2>WhytePaints Website</h2>
               <span class="close-button" onclick="closeProjectModal('project2')"
                 >&times;</span
               >
-              <img src="project1-image.jpg" alt="Project 2" />
-              <p>Description of Project 2</p>
-              <p>Author: John Doe</p>
+              <img
+                src="img/whytePaints.png"
+                alt="WhytePaints"
+                width="250"
+                height="50"
+              />
+              <p>
+                WhytePaints company required to show information about them and
+                thier services as well as get more customers. A website builder
+                - Wix platform was selected for easy of future maintaince and
+                communicating with clients. With support of WhytePaint managment
+                we gathered and adjuststed all company text, created suitable
+                design, made easy to use communication service.
+              </p>
+              <p>Author: Romans Mamrukovs</p>
               <p>
                 Link:
-                <a href="https://www.example.com/project2" target="_blank"
-                  >https://www.example.com/project2</a
+                <a href="https://www.whytepaints.co.uk" target="_blank"
+                  >WhytePaints</a
                 >
               </p>
             </article>
           </div>
         </div>
 
-        <div class="project-card" data-category="graphics">
-          <img src="project3-image.jpg" alt="Project 3" />
-          <h3>3D Graphics Project 3</h3>
-          <p>Description of Project 3</p>
+        <div class="project-card" data-category="websites">
+          <img
+            src="img/buildrefix.jfif"
+            alt="Build ReFix"
+            width="100"
+            height="100"
+          />
+          <h3>Build ReFix Website</h3>
+          <p>One Stop Shop for All Electonic Support</p>
           <button class="more-button" onclick="openProjectModal('project3')">
             More
           </button>
         </div>
 
+        <!-- Modal Project 3 -->
         <div id="project3-modal" class="project-modal">
-          <!-- Modal Project 3 -->
           <div class="project-modal-content">
             <article>
-              <h2>3D Graphics Project 3</h2>
+              <h2>Build ReFix Website</h2>
               <span class="close-button" onclick="closeProjectModal('project3')"
                 >&times;</span
               >
-              <img src="project3-image.jpg" alt="Project 3" />
-              <p>Description of Project 3</p>
-              <p>Author: John Doe</p>
+              <img
+                src="img/buildrefix.jfif"
+                alt="BuildReFix"
+                width="100"
+                height="100"
+              />
+              <p>
+                Build ReFix company required to show information about them and
+                thier services as well as get more customers.
+              </p>
+              <p>Author: Romans Mamrukovs</p>
               <p>
                 Link:
-                <a href="https://www.example.com/project3" target="_blank"
-                  >https://www.example.com/project3</a
+                <a href="https://buildrefix.bitbucket.io/" target="_blank"
+                  >Build ReFix</a
                 >
               </p>
             </article>
@@ -330,9 +360,14 @@
         </div>
 
         <div class="project-card" data-category="graphics">
-          <img src="project4-image.jpg" alt="Project 4" />
-          <h3>3D Graphics Project 4</h3>
-          <p>Description of Project 4</p>
+          <img
+            src="https://cdna.artstation.com/p/users/avatars/000/358/090/large/aa0cdf5ba528c0c46fc206d752a7a13a.jpg?1701600123"
+            alt="ArtStation Profile Logo"
+            width="100"
+            height="100"
+          />
+          <h3>3D Works on ArtStation</h3>
+          <p>Some 3D projects</p>
           <button class="more-button" onclick="openProjectModal('project4')">
             More
           </button>
@@ -342,57 +377,39 @@
           <!-- Modal Project 4 -->
           <div class="project-modal-content">
             <article>
-              <h2>3D Graphics Project 4</h2>
+              <h2>3D Works on ArtStation</h2>
               <span class="close-button" onclick="closeProjectModal('project4')"
                 >&times;</span
               >
-              <img src="project4-image.jpg" alt="Project 4" />
-              <p>Description of Project 4</p>
-              <p>Author: John Doe</p>
+              <img
+                src="https://cdna.artstation.com/p/users/avatars/000/358/090/large/aa0cdf5ba528c0c46fc206d752a7a13a.jpg?1701600123"
+                alt="ArtStation Profile Logo"
+                width="100"
+                height="100"
+              />
+              <p>Some 3D projects</p>
+              <p>Author: Romans Mamrukovs</p>
               <p>
                 Link:
-                <a href="https://www.example.com/project4" target="_blank"
-                  >https://www.example.com/project4</a
+                <a
+                  href="https://www.artstation.com/romanmamrukov"
+                  target="_blank"
+                  >ArtStation Profile</a
                 >
               </p>
             </article>
           </div>
         </div>
 
-        <div class="project-card" data-category="games">
-          <img src="project5-image.jpg" alt="Project 5" />
-          <h3>Games Project 5</h3>
-          <p>Description of Project 5</p>
-          <button class="more-button" onclick="openProjectModal('project5')">
-            More
-          </button>
-        </div>
-
-        <div id="project5-modal" class="project-modal">
-          <!-- Modal Project 5 -->
-          <div class="project-modal-content">
-            <article>
-              <h2>Games Project 5</h2>
-              <span class="close-button" onclick="closeProjectModal('project5')"
-                >&times;</span
-              >
-              <img src="project5-image.jpg" alt="Project 5" />
-              <p>Description of Project 5</p>
-              <p>Author: John Doe</p>
-              <p>
-                Link:
-                <a href="https://www.example.com/project5" target="_blank"
-                  >https://www.example.com/project5</a
-                >
-              </p>
-            </article>
-          </div>
-        </div>
-
-        <div class="project-card" data-category="software">
-          <img src="project6-image.jpg" alt="Project 6" />
-          <h3>Software Project 6</h3>
-          <p>Description of Project 6</p>
+        <div class="project-card" data-category="graphics">
+          <img
+            src="https://cdna.artstation.com/p/users/avatars/000/358/090/large/aa0cdf5ba528c0c46fc206d752a7a13a.jpg?1701600123"
+            alt="Instagram Profile Logo"
+            width="100"
+            height="100"
+          />
+          <h3>3D Works from Instagram</h3>
+          <p>3D works posted on Instagram</p>
           <button class="more-button" onclick="openProjectModal('project6')">
             More
           </button>
@@ -402,17 +419,134 @@
           <!-- Modal Project 6 -->
           <div class="project-modal-content">
             <article>
-              <h2>Software Project 6</h2>
+              <h2>3D Works from Instagram</h2>
               <span class="close-button" onclick="closeProjectModal('project6')"
                 >&times;</span
               >
-              <img src="project6-image.jpg" alt="Project 6" />
-              <p>Description of Project 6</p>
-              <p>Author: John Doe</p>
+              <img
+                src="https://cdna.artstation.com/p/users/avatars/000/358/090/large/aa0cdf5ba528c0c46fc206d752a7a13a.jpg?1701600123"
+                alt="Instagram Profile Logo"
+                width="100"
+                height="100"
+              />
+              <p>Some 3D images on Instagram</p>
+              <p>Author: Romans Mamrukovs</p>
               <p>
                 Link:
-                <a href="https://www.example.com/project6" target="_blank"
-                  >https://www.example.com/project6</a
+                <a
+                  href="https://instagram.com/rm.dimensions?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr"
+                  target="_blank"
+                  >Rm.Dimensions Instagram</a
+                >
+              </p>
+            </article>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="games">
+          <img
+            src="https://img.itch.zone/aW1nLzIyODIzNTEucG5n/original/2yWJW%2F.png"
+            alt="itch.io profile logo"
+            width="100"
+            height="100"
+          />
+          <h3>Game Projects</h3>
+          <p>See all game demos on itch.io</p>
+          <button class="more-button" onclick="openProjectModal('project7')">
+            More
+          </button>
+        </div>
+
+        <div id="project7-modal" class="project-modal">
+          <!-- Modal Project 7 -->
+          <div class="project-modal-content">
+            <article>
+              <h2>Games profile on itch.io</h2>
+              <span class="close-button" onclick="closeProjectModal('project7')"
+                >&times;</span
+              >
+              <img
+                src="https://img.itch.zone/aW1nLzIyODIzNTEucG5n/original/2yWJW%2F.png"
+                alt="itch.io profile logo"
+                width="100"
+                height="100"
+              />
+              <p>Some games demos from itch.io</p>
+              <p>Author: Roman Mamrukov</p>
+              <p>
+                Link:
+                <a href="https://romanm.itch.io/" target="_blank"
+                  >Roman Mamrukov itch.io Profile</a
+                >
+              </p>
+            </article>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="games">
+          <img
+            src="https://img.itch.zone/aW1nLzIyODIzNTEucG5n/original/2yWJW%2F.png"
+            alt="Games Company Logo"
+            width="100"
+            height="100"
+          />
+          <h3>Game Projects Videos</h3>
+          <p>See some games projects videos</p>
+          <button class="more-button" onclick="openProjectModal('project8')">
+            More
+          </button>
+        </div>
+
+        <div id="project8-modal" class="project-modal">
+          <!-- Modal Project 8 -->
+          <div class="project-modal-content">
+            <article>
+              <h2>Game Projects Videos</h2>
+              <span class="close-button" onclick="closeProjectModal('project8')"
+                >&times;</span
+              >
+              <img
+                src="https://img.itch.zone/aW1nLzIyODIzNTEucG5n/original/2yWJW%2F.png"
+                alt="Games Company Logo"
+                width="100"
+                height="100"
+              />
+              <p>See some games projects videos</p>
+              <p>Author: Roman Mamrukov</p>
+              <p>
+                Link:
+                <a
+                  href="https://www.youtube.com/playlist?list=PLSpXPNzPKRK4kVBP6I_MAm_zoIpZC3r2C"
+                  target="_blank"
+                  >Roman Mamrukov games demo playlist</a
+                >
+              </p>
+            </article>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="software">
+          <h3>Software Project</h3>
+          <p>Kepp watching this space...</p>
+          <button class="more-button" onclick="openProjectModal('project9')">
+            More
+          </button>
+        </div>
+
+        <div id="project9-modal" class="project-modal">
+          <!-- Modal Project 9 -->
+          <div class="project-modal-content">
+            <article>
+              <h2>Software Projects</h2>
+              <span class="close-button" onclick="closeProjectModal('project9')"
+                >&times;</span
+              >
+              <p>Keep watching this space...</p>
+              <p>Author: ___</p>
+              <p>
+                Link:
+                <a href="https://www.example.com/project8" target="_blank"
+                  >Empty Link</a
                 >
               </p>
             </article>
@@ -421,6 +555,7 @@
       </div>
     </section>
 
+    <!-- Blog Section -->
     <section id="blog-posts">
       <div class="container main-content" id="blog">
         <h2>Blog</h2>
@@ -428,6 +563,7 @@
       </div>
     </section>
 
+    <!-- Contacts Section -->
     <section id="contacts">
       <div class="container main-content" id="contact">
         <h2>Contact</h2>
@@ -435,7 +571,25 @@
       </div>
     </section>
 
+    <!-- Back to the Top button -->
     <button id="back-to-top" onclick="scrollToTop()">Back to Top</button>
+
+    <!-- Page Footer -->
+    <footer>
+      <nav>
+        <div class="container">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <p>Made by</p>
+          <p>Roman Mamrukov</p>
+        </div>
+      </nav>
+    </footer>
 
     <script src="script.js"></script>
     <script src="themes-switch.js"></script>
