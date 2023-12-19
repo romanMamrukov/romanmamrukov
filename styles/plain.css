@@ -67,6 +67,7 @@ section {
 
 nav ul {
   text-align: center;
+  padding: 0;
 }
 
 nav ul li {
@@ -87,6 +88,10 @@ nav p {
   max-width: 50em;
   margin: 0 auto;
   padding: 16px;
+}
+
+.project-container ul {
+  padding: 0;
 }
 
 .theme-dropdown {
@@ -113,6 +118,42 @@ nav p {
   margin-bottom: 3em;
 }
 
+.project-modal-content {
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #000000;
+  z-index: 1;
+}
+
+.close-button:hover {
+  color: grey;
+}
+
+.project-modal-content h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+article img {
+  display: block;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.project-modal-content p {
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
 /* Back to Top Button */
 #back-to-top {
   display: none;
@@ -129,6 +170,14 @@ nav p {
 
 .container-form {
   text-align: center;
+}
+
+.form-row {
+  padding-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 10px;
 }
 
 .col {
@@ -185,5 +234,13 @@ textarea {
     display: block;
     margin: 10px 0;
     cursor: pointer;
+  }
+
+  .form-row {
+    padding-bottom: 5px;
+  }
+
+  .form-group {
+    margin-bottom: 5px;
   }
 }

@@ -98,14 +98,17 @@ nav p {
   padding: 10px;
 }
 
+.project-container ul {
+  padding: 0;
+}
+
 /* Accordion in Work Experience section */
 .accordion {
   background-color: #eee;
   color: #444;
   cursor: pointer;
   padding: 8px;
-  width: 100%;
-  border: none;
+  border: 1px solid grey;
   text-align: left;
   outline: none;
   font-size: 15px;
@@ -199,7 +202,7 @@ nav p {
 .project-modal-content {
   background-color: #fff;
   position: relative;
-  padding: 20px;
+  padding: 50px;
   width: 50%; /* Set the modal width to 50% of the screen */
   max-width: 800px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -231,6 +234,13 @@ nav p {
 .project-modal-content h2 {
   font-size: 24px;
   margin-bottom: 10px;
+  text-align: center;
+}
+
+article img {
+  display: block;
+  margin: 0 auto;
+  padding: 16px;
 }
 
 .project-modal-content p {
@@ -278,6 +288,14 @@ nav p {
 
 .container-form {
   text-align: center;
+}
+
+.form-row {
+  padding-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 10px;
 }
 
 .col {
@@ -333,5 +351,13 @@ textarea {
   #project-categories ul li {
     display: block;
     margin: 10px 0;
+  }
+
+  .form-row {
+    padding-bottom: 5px;
+  }
+
+  .form-group {
+    margin-bottom: 5px;
   }
 }
