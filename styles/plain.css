@@ -17,14 +17,15 @@ body {
 
 header {
   background-color: #7aa6ce;
-  background-image: url('../img/roman-banner.png');
+  /*background-image: url('../img/roman-banner.png');*/
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   line-height: 1.2;
+  line-break: loose;
   margin: 0 !important;
   max-width: none !important;
-  padding: 10vw 2em !important;
+  padding: 10vw 0 !important;
   text-align: center;
 }
 
@@ -63,6 +64,19 @@ section {
 .home-content h2 {
   margin-top: 0;
   padding-top: 0;
+}
+
+#nav-top {
+  background-color: #96b7d6;
+  border-bottom: 2px solid #9b9b9b;
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+#nav-bottom {
+  background-color: #96b7d6;
+  width: 100%;
 }
 
 nav ul {
@@ -213,8 +227,16 @@ textarea {
     padding: 10px;
   }
 
+  header {
+    padding: 0 0 10vw !important;
+  }
+
   header h1 {
     font-size: 24px;
+  }
+
+  #nav-top {
+    position: unset;
   }
 
   nav ul {

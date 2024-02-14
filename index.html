@@ -11,36 +11,35 @@
   <body>
     <!-- Header Banner Section -->
     <header id="top">
+      <!-- Navigation Section -->
+      <nav id="nav-top">
+        <div class="container nav-cont">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <!-- Dropdown menu for theme selection -->
+            <li>
+              <div class="theme-dropdown">
+                <select id="themeSelector" onchange="changeTheme(this.value)">
+                  <option value="plain">Select Theme:</option>
+                  <option value="plain">Plain</option>
+                  <option value="dark">Night</option>
+                </select>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
       <br />
-      <h1></h1>
       <br />
-      <h2></h2>
+      <h1>Roman</h1>
+      <h2>Mamrukov</h2>
       <br />
       <h3 id="home">Technical Specialist | Developer | Artist</h3>
     </header>
-
-    <!-- Navigation Section -->
-    <nav>
-      <div class="container">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <!-- Dropdown menu for theme selection -->
-          <li>
-            <div class="theme-dropdown">
-              <select id="themeSelector" onchange="changeTheme(this.value)">
-                <option value="plain">Select Theme:</option>
-                <option value="plain">Plain</option>
-                <option value="dark">Night</option>
-              </select>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
 
     <!-- About|Work|Education|Certificats|Skills Section -->
     <div class="container main-content">
@@ -649,7 +648,7 @@
 
     <!-- Page Footer -->
     <footer>
-      <nav>
+      <nav id="nav-bottom">
         <div class="container">
           <ul>
             <li><a href="#home">Home</a></li>
