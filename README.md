@@ -1,4 +1,4 @@
-<h1>Hi there, I'm <a href="https://github.com/romanmamrukov" target="_blank">Roman</a></h1>
+<h1>Hi there, I'm <a href="https://github.com/romanmamrukov" target="_blank">Roman</a> <img src="img/Hi.gif" height="32"/></h1>
 <h3>Software, Games and Web developer from Latvia</h3>
 
 <br>
@@ -8,6 +8,40 @@
 <be>
 
 <p> In my spare time, making websites for businesses, games and software solutions.</p>
+
+---
+
+<div>
+  <p>Languages</p>
+  <img  height="56" src="img/langs/js.png" alt ='js'>
+   <img  height="56" src="img/langs/c-.png" alt ='cpp'>
+</div>
+
+<br>
+<br>
+
+<div>
+  <p>Tools</p>
+  <img  height="56" src="img/tools/node-js.png" alt ='nodejs'>
+  <img  height="56" src="img/tools/git.png" alt ='git'>
+</div>
+
+<br>
+<br>
+
+<div>
+  <p>IDE</p>
+  <img  height="56" src="img/IDE/vscode.png" alt ='vscode'>
+  <img  height="56" src="img/IDE/vs.png" alt ='visual studio'>
+
+</div>
+
+<br>
+
+---
+
+<br>
+
 <!--
 **romanMamrukov/romanMamrukov** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
