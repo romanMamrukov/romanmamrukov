@@ -15,7 +15,7 @@
   <p>Languages</p>
   <img  height="56" src="img/langs/js.png" alt ='js'>
   <img  height="56" src="img/langs/java.png" alt ='java'>
-  <img  height="56" src="img/langs/c-sharp.png.png" alt ='c#'>
+  <img  height="56" src="img/langs/c-sharp.png" alt ='c#'>
   <img  height="56" src="img/langs/c-.png" alt ='cpp'>
   <img  height="56" src="img/langs/php.png" alt ='php'>
 </div>
@@ -37,7 +37,7 @@
   <p>IDE</p>
   <img  height="56" src="img/IDE/vscode.png" alt ='vscode'>
   <img  height="56" src="img/IDE/vs.png" alt ='visual studio'>
-  <img  height="56" src="img/IDE/eclipse.jpg" alt ='eclips'>
+  <img  height="56" src="img/IDE/eclipse.png" alt ='eclips'>
 
 </div>
 
