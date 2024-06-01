@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const navbar = document.querySelector('.navbar');
     const sections = document.querySelectorAll('.section');
+    const burger = document.querySelector('.burger');
+    const navLinks = document.querySelector('.nav-links');
 
     function updateNavbarColors(section) {
         if (section.classList.contains('about') || section.classList.contains('contact')) {
@@ -34,6 +36,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Set initial navbar colors based on the first section
     updateNavbarColors(document.querySelector('.banner'));
+
+    // Burger menu toggle functionality
+    burger.addEventListener('click', () => {
+        burger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
 
     const worksMenu = document.querySelector('.works-menu');
     const worksGallery = document.querySelector('.works-gallery');
