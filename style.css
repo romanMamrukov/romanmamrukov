@@ -11,7 +11,7 @@ body {
   position: relative;
   width: 100%;
   height: 100vh;
-  background: url('https://st2.depositphotos.com/26727728/47296/i/450/depositphotos_472969778-stock-photo-make-happen-written-wooden-blocks.jpg')
+  background: url('https://cdn.creazilla.com/digital-illustrations/1717011/technology-global-networking-illustration-xl.jpeg')
     no-repeat center center/cover;
   display: flex;
   align-items: center;
@@ -53,6 +53,7 @@ body {
   top: 0;
   bottom: unset;
   animation: slideDown 0.5s ease;
+  z-index: 2;
 }
 
 @keyframes slideDown {
@@ -123,9 +124,9 @@ body {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 80px; /* Adjusted for larger navbar */
+  top: 60px; /* Adjusted for larger navbar */
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255);
   align-items: center;
 }
 
@@ -220,6 +221,7 @@ body {
   border-radius: 10px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: hidden;
 }
 
 .work-item:hover {

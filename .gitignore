@@ -4,3 +4,5 @@ logs
 
 # Editor directories and files
 canvaVersion/
+oldVersion/
+newVersion/

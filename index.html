@@ -3,885 +3,135 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Website Title</title>
-    <link rel="stylesheet" href="styles/dark.css" id="themeStyles" />
-    <!-- Add more themes as needed -->
-    <link rel="stylesheet" href="styles/plain.css" disabled />
+    <title>Roman Mamrukov Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <!-- Google tag (gtag-js) -->
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-MCCEWV3WEY"
-  ></script>
-  <script>
-    window.dataLayer = window.datalayer || []
-    function gtag() {
-      dataLayer.push(arguments)
-    }
-    gtag('js', new Date())
-
-    gtag('config', 'G-MCCEWV3WEY')
-  </script>
   <body>
-    <!-- Header Banner Section -->
-    <header id="top">
-      <!-- Navigation Section -->
-      <nav id="nav-top">
-        <div class="container nav-cont">
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <!-- Dropdown menu for theme selection -->
-            <li>
-              <div class="theme-dropdown">
-                <select id="themeSelector" onchange="changeTheme(this.value)">
-                  <option value="dark">Night</option>
-                  <option value="plain">Plain</option>
-                </select>
-              </div>
-            </li>
-          </ul>
+    <header id="home" class="banner">
+      <div class="banner-content">
+        <h1>Connect technology and creativity</h1>
+      </div>
+      <nav class="navbar">
+        <div class="brand">Roman Mamrukov</div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#works">Works</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
         </div>
       </nav>
-      <br />
-      <br />
-      <h1>Roman</h1>
-      <h2>Mamrukov</h2>
-      <br />
-      <h3 id="home">Technical Specialist | Developer | Artist</h3>
     </header>
 
-    <!-- About|Work|Education|Certificats|Skills Section -->
-    <div class="container main-content">
-      <section id="about">
-        <h2>About</h2>
-        <br />
-        <p>
-          I'm Romans Mamrukovs, a Technical Specialist dedicated to unraveling
+    <section id="about" class="section about">
+      <div class="about-content">
+        <img
+          src="https://media.licdn.com/dms/image/D5603AQEPRYkXZfw_fw/profile-displayphoto-shrink_800_800/0/1666372115725?e=1729123200&v=beta&t=NZbhCKCDbCvewy-uVuaF5pquYcdNlTECP0A4TEIRZos"
+          alt="myphoto "
+          class="about-image"
+        />
+        <div class="about-text">
+          <h2>About Me</h2>
+          <p>
+            I'm Romans Mamrukovs, a Technical Specialist dedicated to unraveling
           complex challenges and delivering top-notch support across diverse
           sectors. With a background in software and hardware support,
           networking, security, and robust IT operations, I bring a versatile
           and adaptable approach to addressing various technical issues. Beyond
           my technical expertise, I'm a creator, crafting cutting-edge websites,
           captivating 3D graphics, and immersive games.
-        </p>
-        <br />
-      </section>
-      <section id="work-experince">
-        <h2 class="accordion">Work Experience</h2>
-        <!--Work exp accordion-->
-        <div class="panel">
-          <article>
-            <br />
-            <p>
-              <img
-                src="https://media.licdn.com/dms/image/C4E0BAQGNfeTPCu6Z-w/company-logo_100_100/0/1631312208065?e=1709769600&v=beta&t=vUDx89yAGdhZq5IEWjxMC7tw7ec6tZgC8Zjb_OTPYjI"
-                width="50"
-                height="50"
-              />
-              - At <strong>Schneider Electric</strong>, currently an IT Support
-              and Digital Lead Assistant. Initially onboarded as an IT Support
-              professional, responsible for delivering comprehensive IT services
-              including factory devices, PCs, network management, and security
-              enhancements. Proficiently resolved IT infrastructure issues
-              spanning 1st to 3rd line support, ensuring uninterrupted
-              operations.
-            </p>
-            <p>
-              Elevated to the role of Digital Lead Assistant after three months,
-              actively contributing to critical projects, including lean digital
-              systems and order tracking digital solutions. Collaborated with
-              management for training interns and new employees, contributing to
-              skill development and knowledge transfer.
-            </p>
-          </article>
-          <article>
-            <br />
-            <p>
-              <img
-                src="https://media.licdn.com/dms/image/D4E0BAQGsFM38-Ovjyg/company-logo_100_100/0/1689696650628/kinandcarta_logo?e=1709769600&v=beta&t=Bh5A5JlQPTR_prI1bWh1DpOVTOX2IF4Xj0TMQ2yy3dE"
-                width="50"
-                height="50"
-              />
-              - At <strong>Kin+Carta</strong>, I served as a Match Day Support
-              Executive and 2nd Line Support Specialist. I played a pivotal role
-              in ensuring the seamless execution of EFL events, offering
-              technical support, maintaining EFL websites, and optimizing
-              service delivery for EFL-related activities.
-            </p>
-          </article>
-          <article>
-            <br />
-            <p>
-              <img
-                src="https://media.licdn.com/dms/image/C4E0BAQFcZRhe2q7Ddw/company-logo_100_100/0/1663858093363/recasttv_logo?e=1709769600&v=beta&t=eNFWJTJtCMEHGpB86fNvictb8D0NtCrcEehffpUXDJI"
-                width="50"
-                height="50"
-              />
-              - During my work at <strong>Recast</strong>, I worked as a
-              Technical Support Operative, contributing to the resolution of
-              technical challenges. I also played a vital role in training and
-              enhancing the TechOps department, ultimately improving the Recast
-              fan experience.
-            </p>
-          </article>
-          <article>
-            <br />
-            <p>
-              <img
-                src="https://media.licdn.com/dms/image/C4D0BAQG_8MuWuAiFKA/company-logo_100_100/0/1669814433942?e=1709769600&v=beta&t=04aoEVAigiiZbYDnrFBax5hLe_Gky6tEXMtjXWCfj1U"
-                width="50"
-                height="50"
-              />
-              - At <strong>BuildReFix</strong>, where I've been since October
-              2018, I serve as a Lead Technician. Here, I provide a wide array
-              of technical services, including software and hardware support,
-              systems setups, network management, security, and more. I also
-              contribute to making technical guidelines and documentation, as
-              well as providing IT skills training.
-            </p>
-          </article>
-          <article>
-            <br />
-            <p>
-              <img
-                src="https://media.licdn.com/dms/image/C560BAQGqND37xsy9CQ/company-logo_100_100/0/1630661077193?e=1709769600&v=beta&t=4ddPYxkRoDJkMBzTEya4SE3b1qedLYi8mIn5RLkSC4M"
-                width="50"
-                height="50"
-              />
-              - As an IT Support Technician at <strong>SimplyFixIT</strong>, I
-              excelled in delivering exceptional customer technical support,
-              resolving issues across various channels, and assisting clients in
-              selecting the right repair service or devices.
-            </p>
-          </article>
-        </div>
-      </section>
-      <br />
-      <section id="education">
-        <h2 class="accordion">Education</h2>
-        <div class="panel">
-          <article>
-            <br />
-            <p>
-              I hold a Bachelor's Degree in Computer Games and Programming
-              Skills from <strong>Edinburgh Napier University</strong>, where I
-              honed my skills and participated in events like the
-              <a href="https://romanm.itch.io/bloodrite">Global Game Jam</a>
-            </p>
-          </article>
-        </div>
-      </section>
-      <br />
-      <section id="certf">
-        <h2 class="accordion">Certifications</h2>
-        <div class="panel">
-          <article>
-            <br />
-            <ul>
-              <li>Introduction to Computer Science (SIA Progmeistars)</li>
-              <li>Technical Support Fundamentals (Coursera)</li>
-              <li>
-                Operating Systems and You: Becoming a Power User (Coursera)
-              </li>
-              <li>The Bits and Bytes of Computer Networking (Coursera)</li>
-              <li>
-                IT Security: Defense against the digital dark arts (Coursera)
-              </li>
-            </ul>
-          </article>
-        </div>
-      </section>
-      <br />
-      <section id="skills">
-        <h2 class="accordion">Skills</h2>
-        <div class="panel">
-          <article>
-            <br />
-            <ul>
-              <li>User Provisioning</li>
-              <li>Technical Understanding</li>
-              <li>Problem Solving</li>
-              <li>Product Support</li>
-              <li>Device Management</li>
-              <li>Google Workspace</li>
-              <li>Windows, Linux, MacOS</li>
-              <li>IT Hardware Support</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-    </div>
-
-    <!-- Projects Section -->
-    <section id="projects">
-      <div class="container main-content">
-        <h2>Projects</h2>
-        <br />
-        <section id="project-categories">
-          <div class="container project-container">
-            <h2>Project Categories</h2>
-            <ul>
-              <li class="category" data-category="websites">Websites</li>
-              <li class="category" data-category="graphics">3D Graphics</li>
-              <li class="category" data-category="games">Games</li>
-              <li class="category" data-category="software">Software</li>
-              <!-- Add more categories as needed -->
-            </ul>
-          </div>
-        </section>
-        <br />
-        <!-- Card Project 1.1 -->
-        <div class="project-card" data-category="websites">
-          <img
-            src="https://static.wixstatic.com/media/2a8e49_a50fea740d414453a3c2686912e6a003~mv2.png/v1/fill/w_118,h_103,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/result.png"
-            alt="Tagrolat Logo"
-            width="100"
-            height="100"
-          />
-          <h3>Tagrolat Website</h3>
-          <p>
-            Company website to show information about them and their products
           </p>
-          <button class="more-button" onclick="openProjectModal('project1.1')">
-            More
-          </button>
         </div>
+      </div>
+    </section>
 
-        <!-- Modal Project 1.1 -->
-        <div id="project1.1-modal" class="project-modal">
-          <div class="project-modal-content">
-            <article>
-              <h2>Tagrolat</h2>
-              <span
-                class="close-button"
-                onclick="closeProjectModal('project1.1')"
-                >&times;</span
-              >
-              <img
-                src="https://static.wixstatic.com/media/2a8e49_a50fea740d414453a3c2686912e6a003~mv2.png/v1/fill/w_118,h_103,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/result.png"
-                alt="Tagrolat Logo"
-                width="100"
-                height="100"
-              />
-              <p>
-                Tagrolat company required to show information about them and
-                thier product in the world wide web. I have build website from
-                ground up on Wix platform for easy of future maintaince.
-                Collected required information, translation, as well as assisted
-                with design and text creation, setting up emails and teaching
-                how to use website and managing it.
-              </p>
-              <p>Author: Romans Mamrukovs</p>
-              <p>
-                Link:
-                <a href="https://www.tagrolat.lv/" target="_blank">Tagrolat</a>
-              </p>
-            </article>
-          </div>
+
+    <section id="works" class="section works">
+      <div class="works-menu">
+        <h2>Projects</h2>
+      </div>
+      <div class="works-gallery">
+        <div class="work-item" data-category="web">
+          <h3>Tagrolat Website</h3>
+          <img src="https://static.wixstatic.com/media/2a8e49_a50fea740d414453a3c2686912e6a003~mv2.png/v1/fill/w_118,h_103,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/result.png" alt="Tagrolat logo">
+          <p>Company website to show information about them and their products</p>
+          <a href="https://www.tagrolat.lv/" target="_blank">View Project</a>
         </div>
-
-        <!-- Card Project 1.2 -->
-        <div class="project-card" data-category="websites">
-          <img
-            src="img/logos/whytePaints.png"
-            alt="WhytePaints"
-            width="250"
-            height="50"
-          />
+        <div class="work-item" data-category="web">
           <h3>WhytePaints Website</h3>
+          <img src="img/logos/whytePaints.png" alt="WhytePaints Logo">
           <p>Painting and decorationg company Website</p>
-          <button class="more-button" onclick="openProjectModal('project1.2')">
-            More
-          </button>
+          <a href="https://www.whytepaints.co.uk" target="_blank">View Project</a>
         </div>
-
-        <!-- Modal Project 1.2 -->
-        <div id="project1.2-modal" class="project-modal">
-          <div class="project-modal-content">
-            <article>
-              <h2>WhytePaints Website</h2>
-              <span
-                class="close-button"
-                onclick="closeProjectModal('project1.2')"
-                >&times;</span
-              >
-              <img
-                src="img/logos/whytePaints.png"
-                alt="WhytePaints"
-                width="250"
-                height="50"
-              />
-              <p>
-                WhytePaints company required to show information about them and
-                thier services as well as get more customers. A website builder
-                - Wix platform was selected for easy of future maintaince and
-                communicating with clients. With support of WhytePaint managment
-                we gathered and adjuststed all company text, created suitable
-                design, made easy to use communication service.
-              </p>
-              <p>Author: Romans Mamrukovs</p>
-              <p>
-                Link:
-                <a href="https://www.whytepaints.co.uk" target="_blank"
-                  >WhytePaints</a
-                >
-              </p>
-            </article>
-          </div>
-        </div>
-
-        <!-- Card Project 1.3 -->
-        <div class="project-card" data-category="websites">
-          <img
-            src="img/logos/buildrefix.jfif"
-            alt="Build ReFix"
-            width="100"
-            height="100"
-          />
+        <div class="work-item" data-category="web">
           <h3>Build ReFix Website</h3>
+          <img src="img/logos/buildrefix.jfif" alt="BuildReFix Logo">
           <p>One Stop Shop for All Electonic Support</p>
-          <button class="more-button" onclick="openProjectModal('project1.3')">
-            More
-          </button>
+          <a href="https://www.whytepaints.co.uk" target="_blank">View Project</a>
         </div>
-
-        <!-- Modal Project 1.3 -->
-        <div id="project1.3-modal" class="project-modal">
-          <div class="project-modal-content">
-            <article>
-              <h2>Build ReFix Website</h2>
-              <span
-                class="close-button"
-                onclick="closeProjectModal('project1.3')"
-                >&times;</span
-              >
-              <img
-                src="img/logos/buildrefix.jfif"
-                alt="BuildReFix"
-                width="100"
-                height="100"
-              />
-              <p>
-                Build ReFix company required to show information about them and
-                thier services as well as get more customers.
-              </p>
-              <p>Author: Romans Mamrukovs</p>
-              <p>
-                Link:
-                <a href="https://buildrefix.bitbucket.io/" target="_blank"
-                  >Build ReFix</a
-                >
-              </p>
-            </article>
-          </div>
-        </div>
-
-        <!-- Card Project 1.4 -->
-        <div class="project-card" data-category="websites">
-          <img
-            src="img/logos/WYBMV.png"
-            alt="Valentine's Day Question"
-            width="250"
-            height="50"
-          />
-          <h3>"Would you be my Valentine?" Website</h3>
-          <p>Fun question with only one right answer</p>
-          <button class="more-button" onclick="openProjectModal('project1.4')">
-            More
-          </button>
-        </div>
-
-        <!-- Modal Project 1.4 -->
-        <div id="project1.4-modal" class="project-modal">
-          <div class="project-modal-content">
-            <article>
-              <h2>"Would you be my Valentine?" Website</h2>
-              <span
-                class="close-button"
-                onclick="closeProjectModal('project1.4')"
-                >&times;</span
-              >
-              <img
-                src="img/logos/WYBMV.png"
-                alt="Valentine's Day Question"
-                width="250"
-                height="50"
-              />
-              <p>
-                Fun question with only one answer made in a day. Functions like
-                running away button done with JS and math.
-              </p>
-              <p>Author: Romans Mamrukovs</p>
-              <p>
-                Link:
-                <a
-                  href="https://romanmamrukov.github.io/ValentinePage/"
-                  target="_blank"
-                  >"Would you be my Valentine?"</a
-                >
-              </p>
-            </article>
-          </div>
-        </div>
-
-        <!-- Card Project 1.5 -->
-        <div class="project-card" data-category="websites">
-          <img
-            src="img/logos/"
-            alt="New version - test"
-            width="250"
-            height="50"
-          />
-          <h3>"New version - test?" Website</h3>
-          <p></p>
-          <button class="more-button" onclick="openProjectModal('project1.5')">
-            More
-          </button>
-        </div>
-
-        <!-- Modal Project 1.5 -->
-        <div id="project1.5-modal" class="project-modal">
-          <div class="project-modal-content">
-            <article>
-              <h2>"New version - test" Website</h2>
-              <span
-                class="close-button"
-                onclick="closeProjectModal('project1.5')"
-                >&times;</span
-              >
-              <img
-                src="img/logos/"
-                alt="New website logo"
-                width="250"
-                height="50"
-              />
-              <p>Updated version of the websote to test.</p>
-              <p>Author: Romans Mamrukovs</p>
-              <p>
-                Link:
-                <a href="newVersion/index.html" target="_blank"
-                  >"New Version test?"</a
-                >
-              </p>
-            </article>
-          </div>
-        </div>
-
-        <!-- Card Project 2.1 -->
-        <div class="project-card" data-category="graphics">
-          <img
-            src="img/logos/altersea.png"
-            alt="ArtStation Profile Logo"
-            width="100"
-            height="100"
-          />
+        <div class="work-item" data-category="3D">
           <h3>3D Works on ArtStation</h3>
-          <p>Some 3D projects</p>
-          <button class="more-button" onclick="openProjectModal('project2.1')">
-            More
-          </button>
+          <img src="img/logos/altersea.png" alt="AlterSea Logo">
+          <p>Some 3D artworks</p>
+          <a href="https://www.artstation.com/romanmamrukov" target="_blank">ArtStation Profile</a>
         </div>
-
-        <!-- Modal Project 2.1 -->
-        <div id="project2.1-modal" class="project-modal">
-          <div class="project-modal-content">
-            <article>
-              <h2>3D Works on ArtStation</h2>
-              <span
-                class="close-button"
-                onclick="closeProjectModal('project2.1')"
-                >&times;</span
-              >
-              <img
-                src="img/logos/altersea.png"
-                alt="ArtStation Profile Logo"
-                width="100"
-                height="100"
-              />
-              <p>Some 3D projects</p>
-              <p>Author: Romans Mamrukovs</p>
-              <p>
-                Link:
-                <a
-                  href="https://www.artstation.com/romanmamrukov"
-                  target="_blank"
-                  >ArtStation Profile</a
-                >
-              </p>
-            </article>
-          </div>
-        </div>
-
-        <!-- Card Project 2.2 -->
-        <div class="project-card" data-category="graphics">
-          <img
-            src="img/logos/altersea.png"
-            alt="Instagram Profile Logo"
-            width="100"
-            height="100"
-          />
-          <h3>3D Works from Instagram</h3>
-          <p>3D works posted on Instagram</p>
-          <button class="more-button" onclick="openProjectModal('project2.2')">
-            More
-          </button>
-        </div>
-
-        <!-- Modal Project 2.2 -->
-        <div id="project2.2-modal" class="project-modal">
-          <div class="project-modal-content">
-            <article>
-              <h2>3D Works from Instagram</h2>
-              <span
-                class="close-button"
-                onclick="closeProjectModal('project2.2')"
-                >&times;</span
-              >
-              <img
-                src="img/logos/altersea.png"
-                alt="Instagram Profile Logo"
-                width="100"
-                height="100"
-              />
-              <p>Some 3D images on Instagram</p>
-              <p>Author: Romans Mamrukovs</p>
-              <p>
-                Link:
-                <a
-                  href="https://instagram.com/rm.dimensions?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr"
-                  target="_blank"
-                  >Rm.Dimensions Instagram</a
-                >
-              </p>
-            </article>
-          </div>
-        </div>
-
-        <!-- Card Project 3.1 -->
-        <div class="project-card" data-category="games">
-          <img
-            src="img/logos/altersea.png"
-            alt="itch.io profile logo"
-            width="100"
-            height="100"
-          />
-          <h3>Game Projects</h3>
+        <div class="work-item" data-category="games">
+          <h3>Games Demos</h3>
+          <img src="img/logos/altersea.png" alt="AlterSea Logo">
           <p>See all game demos on itch.io</p>
-          <button class="more-button" onclick="openProjectModal('project3.1')">
-            More
-          </button>
-        </div>
-
-        <!-- Modal Project 3.1 -->
-        <div id="project3.1-modal" class="project-modal">
-          <div class="project-modal-content">
-            <article>
-              <h2>Games profile on itch.io</h2>
-              <span
-                class="close-button"
-                onclick="closeProjectModal('project3.1')"
-                >&times;</span
-              >
-              <img
-                src="img/logos/altersea.png"
-                alt="itch.io profile logo"
-                width="100"
-                height="100"
-              />
-              <p>Some games demos from itch.io</p>
-              <p>Author: Roman Mamrukov</p>
-              <p>
-                Link:
-                <a href="https://romanm.itch.io/" target="_blank"
-                  >Roman Mamrukov itch.io Profile</a
-                >
-              </p>
-            </article>
-          </div>
-        </div>
-
-        <!-- Card Project 3.2 -->
-        <div class="project-card" data-category="games">
-          <img
-            src="img/logos/selfGamesDevChannel.jpg"
-            alt="Games YouTube Channel Banner"
-            width="100"
-            height="100"
-          />
-          <h3>Game Projects Videos</h3>
-          <p>See some games projects videos</p>
-          <button class="more-button" onclick="openProjectModal('project3.2')">
-            More
-          </button>
-        </div>
-
-        <!-- Modal Project 3.2 -->
-        <div id="project3.2-modal" class="project-modal">
-          <div class="project-modal-content">
-            <article>
-              <h2>Game Projects Videos</h2>
-              <span
-                class="close-button"
-                onclick="closeProjectModal('project3.2')"
-                >&times;</span
-              >
-              <img
-                src="img/logos/selfGamesDevChannel.jpg"
-                alt="Games YouTube Channel Banner"
-                width="100"
-                height="100"
-              />
-              <p>See some games projects videos</p>
-              <p>Author: Roman Mamrukov</p>
-              <p>
-                Link:
-                <a
-                  href="https://www.youtube.com/playlist?list=PLSpXPNzPKRK4kVBP6I_MAm_zoIpZC3r2C"
-                  target="_blank"
-                  >Roman Mamrukov games demo playlist</a
-                >
-              </p>
-            </article>
-          </div>
-        </div>
-
-        <!-- Card Project 3.3 -->
-        <div class="project-card" data-category="games">
-          <img
-            src="img/logos/tictactoeGame.jpg"
-            alt="Tic-Tac-Toe Game page"
-            width="100"
-            height="100"
-          />
-          <h3>Tic-Tac-Toe webgame</h3>
-          <p>Classic game Tic-Tac-Toe made in a browser</p>
-          <button class="more-button" onclick="openProjectModal('project3.3')">
-            More
-          </button>
-        </div>
-
-        <!-- Modal Project 3.3 -->
-        <div id="project3.3-modal" class="project-modal">
-          <div class="project-modal-content">
-            <article>
-              <h2>Tic-Tac-Toe webgame</h2>
-              <span
-                class="close-button"
-                onclick="closeProjectModal('project3.3')"
-                >&times;</span
-              >
-              <img
-                src="img/logos/tictactoeGame.jpg"
-                alt="Tic-Tac-Toe Game page"
-                width="100"
-                height="100"
-              />
-              <p>Classic game Tic-Tac-Toe made in a browser</p>
-              <p>Author: Roman Mamrukov</p>
-              <p>
-                Link:
-                <a
-                  href="https://romanmamrukov.github.io/TicTacToeWebGame/"
-                  target="_blank"
-                  >Game website</a
-                >
-              </p>
-            </article>
-          </div>
-        </div>
-
-        <!-- Card Project 3.4 -->
-        <div class="project-card" data-category="games">
-          <img
-            src="img/logos/snakeGame.jpg"
-            alt="Snake Games webpage"
-            width="100"
-            height="100"
-          />
-          <h3>Snake Game</h3>
-          <p>Classic Nokia phone game "Snake" made in a browser</p>
-          <button class="more-button" onclick="openProjectModal('project3.4')">
-            More
-          </button>
-        </div>
-
-        <!-- Modal Project 3.4 -->
-        <div id="project3.4-modal" class="project-modal">
-          <div class="project-modal-content">
-            <article>
-              <h2>Snake Game</h2>
-              <span
-                class="close-button"
-                onclick="closeProjectModal('project3.4')"
-                >&times;</span
-              >
-              <img
-                src="img/logos/snakeGame.jpg"
-                alt="Snake Games webpage"
-                width="100"
-                height="100"
-              />
-              <p>Classic Nokia phone game "Snake" made in a browser</p>
-              <p>Author: Roman Mamrukov</p>
-              <p>
-                Link:
-                <a
-                  href="https://romanmamrukov.github.io/snakegame/"
-                  target="_blank"
-                  >Game website</a
-                >
-              </p>
-            </article>
-          </div>
-        </div>
-
-        <!-- Card Project 4.1 -->
-        <div class="project-card" data-category="software">
-          <h3>Software Project</h3>
-          <p>Kepp watching this space...</p>
-          <button class="more-button" onclick="openProjectModal('project4.1')">
-            More
-          </button>
-        </div>
-
-        <!-- Modal Project 4.1 -->
-        <div id="project4.1-modal" class="project-modal">
-          <div class="project-modal-content">
-            <article>
-              <h2>Software Projects</h2>
-              <span
-                class="close-button"
-                onclick="closeProjectModal('project4.1')"
-                >&times;</span
-              >
-              <p>Keep watching this space...</p>
-              <p>Author: ___</p>
-              <p>
-                Link:
-                <a href="https://www.example.com/project8" target="_blank"
-                  >Empty Link</a
-                >
-              </p>
-            </article>
-          </div>
+          <a href="https://romanm.itch.io/" target="_blank">itch.io Profile</a>
         </div>
       </div>
-    </section>
+  </section>
 
-    <!-- Blog Section -->
-    <section id="blog-posts">
-      <div class="container main-content" id="blog">
-        <h2>Blog</h2>
-        <p>Check out latest blog posts.</p>
-      </div>
-    </section>
-
-    <!-- Contacts Section -->
-    <section id="contacts">
-      <div class="container main-content" id="contact">
-        <h2>Contact</h2>
-        <p>Get in touch.</p>
-        <!-- Contacts Form -->
-        <div class="container-form">
-          <h3>Email Me</h3>
-          <form
-            target="_blank"
-            action="https://formsubmit.co/roman.mamrukov@gmail.com"
-            method="POST"
-          >
-            <div class="form-group">
-              <div class="form-row">
-                <div class="col">
-                  <input
-                    type="text"
-                    name="name"
-                    class="form-control"
-                    placeholder="Full Name"
-                    required
-                  />
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="col">
-                  <input
-                    type="email"
-                    name="email"
-                    class="form-control"
-                    placeholder="Email Address"
-                    required
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="form-group form-control">
-              <label for="subject">Theme</label>
-              <select id="subjectSelector" name="subject" required>
-                <option value="default">Subject:</option>
-                <option value="Work">Work</option>
-                <option value="Discus">Discussion</option>
-                <option value="inTouch">Get in Touch</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <textarea
-                placeholder="Your Message"
-                class="form-control"
-                name="message"
-                rows="10"
-                required
-              ></textarea>
-            </div>
-            <button type="submit" class="btn btn-lg btn-dark btn-block">
-              Submit Form
-            </button>
-          </form>
-        </div>
-        <!-- Social Contacts -->
-        <ul id="socMedia">
-          <li>
-            <img
+    <section id="contact" class="section contact">
+      <h2>Contact Me</h2>
+      <form
+        target="_blank"
+        action="https://formsubmit.co/roman.mamrukov@gmail.com"
+        method="POST"
+      >
+        <input type="text"
+        name="name"
+        class="form-control"
+        placeholder="Full Name"
+        required />
+        <input  type="email"
+        name="email"
+        class="form-control"
+        placeholder="Email Address"
+        required />
+        <select id="subjectSelector" name="subject" required>
+          <option value="default">Subject:</option>
+          <option value="Work">Work</option>
+          <option value="Discus">Discussion</option>
+          <option value="inTouch">Get in Touch</option>
+        </select>
+        <textarea placeholder="Your Message"
+        class="form-control"
+        name="message"
+        rows="10"
+        required></textarea>
+        <button type="submit">Send</button>
+      </form>
+      <div class="social-links">
+        <img
               src="https://content.linkedin.com/content/dam/me/about/LinkedIn_Icon.jpg.original.jpg"
               width="25"
               height="25"
-            />
-            <a href="https://www.linkedin.com/in/roman-mamrukov/">LinkedIn</a>
-          </li>
-          <li>
-            <img
+            /><a href="https://www.linkedin.com/in/roman-mamrukov/">LinkedIn</a>
+        <img
               src="https://static.xx.fbcdn.net/assets/?revision=1431132240730458&name=Illustrations-Get-Started&density=1"
               width="25"
               height="25"
-            /><a href="https://wa.me/+447367771616">WhatApp</a>
-          </li>
-        </ul>
+            /><a href="https://wa.me/+447367771616">WhatsApp</a>
       </div>
     </section>
 
-    <!-- Back to the Top button -->
-    <button id="back-to-top" onclick="scrollToTop()">Back to Top</button>
-
-    <!-- Page Footer -->
-    <footer>
-      <nav id="nav-bottom">
-        <div class="container">
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-          <p>Made by</p>
-          <p>Roman Mamrukov</p>
-        </div>
-      </nav>
-    </footer>
-
     <script src="script.js"></script>
-    <script src="themes-switch.js"></script>
   </body>
 </html>
