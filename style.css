@@ -224,6 +224,16 @@ body {
   display: hidden;
 }
 
+.work-item img {
+  width: 150px;
+  height: 150px;
+}
+
+.work-item:nth-child(2) img {
+  width: 270px;
+  height: 130px;
+}
+
 .work-item:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
