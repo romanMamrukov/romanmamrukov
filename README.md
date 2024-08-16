@@ -17,7 +17,7 @@
   <img  height="56" src="img/langs/java.png" alt ='java'>
   <img  height="56" src="img/langs/c-sharp.png" alt ='c#'>
   <img  height="56" src="img/langs/c-.png" alt ='cpp'>
-  <img  height="56" src="img/langs/php.png" alt ='php'>
+  <img  height="56" src="img/langs/py.png" alt ='python'>
 </div>
 
 <br>
