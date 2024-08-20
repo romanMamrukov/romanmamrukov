@@ -38,7 +38,7 @@ body {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 80px; /* Increased height */
+  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -66,19 +66,20 @@ body {
 }
 
 .navbar .brand {
-  font-size: 1.8em; /* Increased font size */
+  font-size: 1.8em;
+  margin: 16px 0 16px 16px;
 }
 
 .navbar ul {
   list-style: none;
-  margin: 0;
+  margin: 16px 16px 16px 0;
   padding: 0;
   display: flex;
   justify-content: center;
 }
 
 .navbar ul li {
-  margin: 0 20px; /* Increased margin */
+  margin: 0 20px;
 }
 
 .navbar ul li a {
@@ -94,6 +95,7 @@ body {
 
 .navbar .burger {
   display: none;
+  margin: 16px 16px 16px 0;
   cursor: pointer;
   flex-direction: column;
   justify-content: space-between;
@@ -124,7 +126,7 @@ body {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 60px; /* Adjusted for larger navbar */
+  top: 60px;
   width: 100%;
   background-color: rgba(255, 255, 255);
   align-items: center;
@@ -133,14 +135,69 @@ body {
 .section {
   padding: 50px;
   min-height: 100vh;
-  transition: background-color 0.5s ease;
 }
 
 .about {
   background-color: #fff;
   color: #000;
+}
+
+.section.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  min-height: 80vh;
+  transition: background-color 0.5s ease;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
   animation: slideUp 1s ease-in-out;
 }
+
+.about-image {
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.work-experience {
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+}
+
+.work-experience-item {
+  align-items: center;
+  margin: 0 50px 10px 0;
+}
+
+.work-experience-item img {
+  margin-right: 10px;
+}
+
+.skills-certifications {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skills, .certifications {
+  flex: 1;
+  margin: 20px;
+}
+
+.skills ul, .certifications ul {
+  list-style-type: none;
+}
+
 
 @keyframes slideUp {
   from {
@@ -311,11 +368,11 @@ body {
   }
 
   .navbar {
-    height: 60px; /* Adjusted height for mobile view */
+    height: 60px;
   }
 
   .navbar .brand {
-    font-size: 1.5em; /* Adjusted font size */
+    font-size: 1.5em;
   }
 
   .navbar ul {
@@ -336,5 +393,9 @@ body {
 
   .navbar ul li {
     margin: 10px 0;
+  }
+
+  .work-experience-item {
+    margin: 0 50px 10px 50px;
   }
 }
