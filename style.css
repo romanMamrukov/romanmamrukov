@@ -42,9 +42,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
-  background-color: rgba(255, 255, 255, 0.9);
-  color: #000;
+  background-color: #043540;
+  color: #fff;
   transition: background-color 0.5s ease, color 0.5s ease;
 }
 
@@ -84,13 +83,13 @@ body {
 
 .navbar ul li a {
   text-decoration: none;
-  color: #000;
+  color: #fff;
   font-size: 1.5em;
-  transition: color 0.3s ease;
 }
 
 .navbar ul li a:hover {
-  color: #333;
+  color: #26A62F;
+  transition: color 0.3s ease;
 }
 
 .navbar .burger {
@@ -105,7 +104,7 @@ body {
 .navbar .burger div {
   width: 30px;
   height: 3px;
-  background-color: #000;
+  background-color: #043540;
   border-radius: 5px;
   transition: all 0.3s linear;
 }
@@ -126,9 +125,9 @@ body {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 60px;
+  top: 40px;
   width: 100%;
-  background-color: rgba(255, 255, 255);
+  background-color: #0A6873;
   align-items: center;
 }
 
@@ -181,7 +180,7 @@ body {
 }
 
 .work-experience-item img {
-  margin-right: 10px;
+  margin: 10px 0;
 }
 
 .skills-certifications {
@@ -191,11 +190,12 @@ body {
 
 .skills, .certifications {
   flex: 1;
-  margin: 20px;
+  margin: 50px;
 }
 
 .skills ul, .certifications ul {
-  list-style-type: none;
+  list-style-type: circle;
+  padding: 0;
 }
 
 
@@ -227,6 +227,7 @@ body {
 
 .about-image:hover {
   transform: scale(1.1);
+  box-shadow: 0 5px 10px #0A687380;
 }
 
 .about-text {
@@ -236,7 +237,7 @@ body {
 }
 
 .works {
-  background-color: #000;
+  background-color: #04354050;
   color: #fff;
   animation: slideUp 1s ease-in-out;
 }
@@ -247,20 +248,26 @@ body {
 }
 
 .works-menu button {
-  margin: 0 10px;
+  margin: 5px 10px;
   padding: 10px 20px;
   border: none;
-  background-color: #fff;
-  color: #000;
+  border-radius: 5%;
+  width: 150px;
+  background-color: #0A6873;
+  color: #50F268;
   cursor: pointer;
   font-size: 1.2em;
   transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
 }
 
 .works-menu button:hover {
-  background-color: #ddd;
-  color: #000;
   transform: scale(1.1);
+}
+
+.works-menu button.active {
+  transform: scale(1.1);
+  background-color: #0A6873;
+  color: #50F268;
 }
 
 .works-gallery {
@@ -274,7 +281,7 @@ body {
   margin: 15px;
   padding: 20px;
   background-color: #fff;
-  color: #000;
+  color: #0A6873;
   border-radius: 10px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -293,12 +300,12 @@ body {
 
 .work-item:hover {
   transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 20px #50F268;
 }
 
 .contact {
   background-color: #fff;
-  color: #000;
+  color: #0A6873;
   text-align: center;
   animation: slideUp 1s ease-in-out;
 }
@@ -328,7 +335,7 @@ body {
 .contact form button {
   padding: 10px;
   border: none;
-  background-color: #000;
+  background-color: #043540;
   color: #fff;
   cursor: pointer;
   font-size: 1.2em;
@@ -337,7 +344,7 @@ body {
 }
 
 .contact form button:hover {
-  background-color: #333;
+  background-color: #0A6873;
   transform: scale(1.05);
 }
 
@@ -355,6 +362,66 @@ body {
 
 .social-links a:hover {
   color: #555;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #043540;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  padding: 15px 0 25px 0;
+  bottom: 0;
+  width: 100%;
+  animation: fadeIn 1.5s ease-in;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer p {
+  margin: 10px 0;
+}
+
+.footer ul {
+  padding: 0;
+}
+
+.footer .footer-links li {
+  list-style: none;
+  display: inline;
+  margin: 0 10px;
+}
+
+.footer .footer-links a {
+  margin-top: 10px;
+  text-decoration: none;
+  color: #50F268;
+  font-size: 1.2em;
+  transition: color 0.3s ease; 
+}
+
+.footer .footer-links a:hover {
+  color: #26A62F;
+}
+
+.footer .social-links {
+  margin-top: 10px;
+}
+
+.footer .social-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #50F268;
+  font-size: 1.2em;
+  transition: color 0.3s ease;
+}
+
+.footer .social-links a:hover {
+  color: #26A62F;
 }
 
 @media (max-width: 768px) {
@@ -397,5 +464,13 @@ body {
 
   .work-experience-item {
     margin: 0 50px 10px 50px;
+  }
+
+  .footer {
+    padding: 15px 0 25px 0;
+  }
+
+  .footer .social-links a {
+    font-size: 1em;
   }
 }
