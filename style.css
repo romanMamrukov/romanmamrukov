@@ -303,6 +303,18 @@ body {
   box-shadow: 0 10px 20px #50F268;
 }
 
+.work-item a {
+  font-size: large;
+  color: #0A6873;
+  text-decoration: none;
+}
+
+.work-item a:hover {
+  font-size: large;
+  color: #26A62F;
+  transition: color 0.3s ease;
+}
+
 .contact {
   background-color: #fff;
   color: #0A6873;
