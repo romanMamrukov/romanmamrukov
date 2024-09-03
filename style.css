@@ -15,17 +15,8 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  animation: fadeIn 1.5s ease-in;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 
 .banner-content h1 {
   font-size: 4em;
@@ -49,7 +40,7 @@ body {
   position: fixed;
   top: 0;
   bottom: unset;
-  animation: slideDown 0.5s ease;
+  animation: slideDown 0.2s ease;
   z-index: 2;
 }
 
@@ -130,22 +121,26 @@ body {
 }
 
 .section {
-  padding: 50px;
-  min-height: 100vh;
+  scroll-snap-type: y mandatory;
+}
+
+.section h2 {
+  margin: 0;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  background-color: #043540;
+  color: #fff; 
 }
 
 .about {
-  background-color: #fff;
-  color: #000;
-}
-
-.section.about {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 50px;
-  min-height: 80vh;
   transition: background-color 0.5s ease;
+  background-color: #fff;
+  color: #000;
 }
 
 .about-content {
@@ -158,6 +153,7 @@ body {
 .about-image {
   margin-right: 20px;
   border-radius: 50%;
+  animation: slideUp 1.5s ease-in-out;
 }
 
 .about-text {
@@ -165,17 +161,21 @@ body {
 }
 
 .work-experience {
-  margin: 20px 0;
+  padding: 50px;
   display: flex;
   flex-wrap: wrap;
   text-align: center;
   justify-content: center;
-  animation: slideUp 1s ease-in-out;
+  background-color: #043540;
+  color: #fff;
 }
 
 .work-experience-item {
   align-items: center;
-  margin: 0 50px 10px 0;
+  width: 150px;
+  height: 150px;
+  margin: 10px 15px;
+  animation: slideUp 1s ease-in-out;
 }
 
 .work-experience-item img {
@@ -185,17 +185,27 @@ body {
 .skills-certifications {
   display: flex;
   flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  background-color: #043540;
+  color: #fff;
+  margin: 0 auto;
 }
 
 .skills, .certifications {
   flex: 1;
-  margin: 50px;
+  margin: 20px;
+  max-width: 30% !important;
 }
 
 .skills ul, .certifications ul {
-  list-style-type: circle;
+  list-style-type: none;
   padding: 0;
   animation: slideUp 1s ease-in-out;
+}
+
+.skills ul li, .certifications ul li {
+  margin: 16px;
 }
 
 
@@ -239,16 +249,16 @@ body {
 .works {
   background-color: #04354050;
   color: #fff;
-  animation: slideUp 1s ease-in-out;
 }
 
 .works-menu {
   text-align: center;
   margin-bottom: 20px;
+  background-color: #043540;
 }
 
 .works-menu button {
-  margin: 5px 10px;
+  margin: 5px 2px;
   padding: 10px 20px;
   border: none;
   border-radius: 5%;
@@ -262,6 +272,7 @@ body {
 
 .works-menu button:hover {
   transform: scale(1.1);
+  box-shadow: 0 1px 3px #50F268;
 }
 
 .works-menu button.active {
@@ -274,6 +285,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  animation: slideUp 1s ease-in-out;
 }
 
 .work-item {
@@ -294,8 +306,8 @@ body {
 }
 
 .work-item:nth-child(2) img {
-  width: 270px;
-  height: 130px;
+  width: 250px;
+  height: 70px;
 }
 
 .work-item:nth-child(4) img {
@@ -303,9 +315,24 @@ body {
   height: 70px;
 }
 
+.work-item:nth-child(8) img {
+  width: 75px;
+  height: 150px;
+}
+
+.work-item:nth-child(9) img {
+  width: 75px;
+  height: 150px;
+}
+
 .work-item:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 20px #50F268;
+}
+
+.work-item:hover img {
+  transition: transform 0.3s ease;
+  transform: scale(1.05);
 }
 
 .work-item a {
@@ -324,18 +351,27 @@ body {
   background-color: #fff;
   color: #0A6873;
   text-align: center;
-  animation: slideUp 1s ease-in-out;
+  padding: 50px;
+}
+
+.contact h2 {
+  background-color: #fff;
+  color: #0A6873;
+  text-align: center;
+  padding-top: 0;
 }
 
 .contact form {
-  max-width: 600px;
+  max-width: 500px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  animation: slideUp 1s ease-in-out;
 }
 
 .contact form input,
+.contact form select,
 .contact form textarea {
   padding: 10px;
   border: 1px solid #000;
@@ -345,6 +381,7 @@ body {
 }
 
 .contact form input:focus,
+.contact form select:focus,
 .contact form textarea:focus {
   border-color: #555;
 }
@@ -484,9 +521,9 @@ body {
   }
 
   .work-experience-item {
-    margin: 0 50px 10px 50px;
+    margin: 10px 15px;
   }
-
+  
   .footer {
     padding: 15px 0 25px 0;
   }
