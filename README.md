@@ -1,9 +1,9 @@
 <h1>Hi there, I'm <a href="https://github.com/romanmamrukov" target="_blank">Roman</a> <img src="img/Hi.gif" height="32"/></h1>
-<h3>Software, Games and Web developer from Latvia</h3>
+<h3>Software, Games & Web developer from Latvia</h3>
 
 <br>
 
-<p> I currently work as a Digital assistant at Schneider Electric. Implement digital solutions.</p>
+<p> I currently implement digital solutions.</p>
 
 <be>
 
