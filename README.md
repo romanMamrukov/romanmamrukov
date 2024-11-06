@@ -1,4 +1,4 @@
-<h1>Hi there, I'm <a href="https://github.com/romanmamrukov" target="_blank">Roman</a> <img src="img/Hi.gif" height="32"/></h1>
+<h1>Hi there, I'm <a href="https://github.com/romanmamrukov" target="_blank">Roman</a></h1>
 <h3>Software, Games & Web developer from Latvia</h3>
 
 <br>
