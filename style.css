@@ -305,12 +305,22 @@ body {
   height: 150px;
 }
 
+.work-item:nth-child(3) img {
+  width: 200px;
+  height: 70px;
+}
+
 .work-item:nth-child(4) img {
   width: 200px;
   height: 70px;
 }
 
 .work-item:nth-child(10) img {
+  width: 100px;
+  height: 150px;
+}
+
+.work-item:nth-child(11) img {
   width: 75px;
   height: 150px;
 }
