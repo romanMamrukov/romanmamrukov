@@ -1,245 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Roman Mamrukov Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <!-- Google tag (gtag-js) -->
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-MCCEWV3WEY"
-  ></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roman Mamrukov Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCCEWV3WEY"></script>
   <script>
-    window.dataLayer = window.datalayer || []
-    function gtag() {
-      dataLayer.push(arguments)
-    }
-    gtag('js', new Date())
-
-    gtag('config', 'G-MCCEWV3WEY')
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-MCCEWV3WEY');
   </script>
-  <body>
-    <header id="home" class="banner">
-      <nav class="navbar">
-        <div class="brand">Roman Mamrukov</div>
-        <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="./works.html">Works</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="burger">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </div>
-      </nav>
-      <div class="banner-content">
-      </div>
-    </header>
+</head>
 
-    <section id="about" class="section about">
-      <div class="about-content">
-        <!--
-        <img
-          src="img/logos/personal_img.jfif"
-          alt="myphoto "
-          class="about-image"
-        />
-        -->
-        <div class="about-text">
-          <h3>Connect with technology</h3> 
-          <h3>Deliver solutions</h3>
-          <p>
-            I'm <bold>Romans Mamrukovs</bold>, a skilled Technical Specialist experienced in software and hardware support, networking, and IT security. I also create engaging websites, 3D graphics, and interactive games.
-          </p>
-        </div>
-        <div class="social-links">
-          <img
-            src="img/logos/svg/linkedin.svg"
-            width="25"
-            height="25"
-          /><a href="https://www.linkedin.com/in/roman-mamrukov/">LinkedIn</a>
-          <img
-            src="img/logos/svg/github.svg"
-            width="25"
-            height="25"
-          /><a href="https://github.com/romanMamrukov/" target="_blank">GitHub</a>
-        </div>
+<body>
+  <!-- Header / Navigation -->
+  <header id="home" class="banner">
+    <nav class="navbar">
+      <div class="brand">Roman Mamrukov</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="./works.html">Works</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
       </div>
-      </div>
-    </section>
+    </nav>
+    <div class="banner-content"></div>
+  </header>
 
-    <section class="section">
-      <h2>Work Expirience</h2>
-    </section>
-    <section class="section work-experience">
-      <div class="work-experience-item">
-        <img
-          src="img/logos/comp_logos/acolad.png"
-          width="50"
-          height="50"
-        />
-        <div class="work-text">
-          <strong>Acolad</strong><br />
-          IT Support and Helpdesk Analyst
-        </div>
-  </div>
-      <div class="work-experience-item">
-            <img
-              src="img/logos/comp_logos/schneider_electric.png"
-              width="50"
-              height="50"
-            />
-            <div class="work-text">
-              <strong>Schneider Electric</strong><br />
-              IT Support and Digital Lead Assistant
-            </div>
+  <!-- About Section -->
+  <section id="about" class="section about">
+    <div class="about-content">
+      <!-- Uncomment to add image -->
+      <!--
+      <img
+        src="img/logos/personal_img.jfif"
+        alt="my photo"
+        class="about-image"
+      />
+      -->
+      <div class="about-text">
+<div class="terminal">  
+<p>&gt; Hello, I create <span id="rotating-text"></span></p>
+</div>
+  <p>I'm a Technical Specialist with experience in software & hardware support, networking, and IT security.</p>
+  <p>I also craft creative digital solutions, including modern websites, immersive 3D visuals, and interactive user experiences.
+  </p>
+</div>
+         <div class="social-links">
+        <img src="img/logos/svg/linkedin.svg" width="25" height="25" />
+        <a href="https://www.linkedin.com/in/roman-mamrukov/">LinkedIn</a>
+        <img src="img/logos/svg/github.svg" width="25" height="25" />
+        <a href="https://github.com/romanMamrukov/" target="_blank">GitHub</a>
       </div>
-      <div class="work-experience-item">
-            <img
-              src="img/logos/comp_logos/kin_n_carta.png"
-              width="50"
-              height="50"
-            />
-            <div class="work-text">
-              <strong>Kin + Carta</strong><br />
-              Web Administration & Support
-            </div>
-      </div>
-      <div class="work-experience-item">
-            <img
-              src="img/logos/comp_logos/buildrefix.jfif"
-              width="50"
-              height="50"
-            />
-            <div class="work-text">
-              <strong>BUILD REFIX</strong><br />
-              Lead Technician
-            </div>
-      </div>
-      <div class="work-experience-item">
-            <img
-              src="img/logos/comp_logos/recast.png"
-              width="50"
-              height="50"
-            />
-            <div class="work-text">
-              <strong>Recast </strong><br />
-              Technical Support Operative
-            </div>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section skills-certifications">
-        <div class="skills">
-          <h2>Skills</h2>
-            <ul>
-              <li>User Provisioning</li>
-              <li>Technical Understanding</li>
-              <li>Problem Solving</li>
-              <li>Product Support</li>
-              <li>Device Management</li>
-              <li>Windows, Linux, MacOS</li>
-              <li>IT Hardware Support</li>
-              <li>Web Development</li>
-              <li>Software Development</li>
-            </ul>
-        </div>
-        <div class="certifications">
-          <h2>Certifications</h2>
-            <ul>
-              <li>Introduction to Computer Science</li>
-              <li>Technical Support Fundamentals</li>
-              <li>
-                Operating Systems: Windows, Linux, MacOS
-              </li>
-              <li>Computer Networking</li>
-              <li>
-                IT Security Fundamentals
-              </li>
-            </ul>
-        </div>
-    </section>
+  <!-- Work Experience Heading -->
+  <section class="section">
+    <h2>Work Expirience</h2>
+  </section>
 
-    <section id="contact" class="section contact">
-      <h2>Contact Me</h2>
-      <form
-        target="_blank"
-        action="https://formsubmit.co/roman.mamrukov@gmail.com"
-        method="POST"
-      >
-        <input type="text"
-        name="name"
-        class="form-control"
-        placeholder="Full Name"
-        required />
-        <input  type="email"
-        name="email"
-        class="form-control"
-        placeholder="Email Address"
-        required />
-        <select id="subjectSelector" name="subject" class="form-control" required>
-          <option value="default">Subject:</option>
-          <option value="Work">Work</option>
-          <option value="Discus">Discussion</option>
-          <option value="inTouch">Get in Touch</option>
-        </select>
-        <textarea placeholder="Your Message"
+  <!-- Work Experience List -->
+  <section class="section work-experience">
+    <div class="work-experience-item">
+      <img src="img/logos/comp_logos/acolad.png" width="50" height="50" />
+      <div class="work-text">
+        <strong>Acolad</strong><br />
+        IT Support and Helpdesk Analyst
+      </div>
+    </div>
+
+    <div class="work-experience-item">
+      <img src="img/logos/comp_logos/schneider_electric.png" width="50" height="50" />
+      <div class="work-text">
+        <strong>Schneider Electric</strong><br />
+        IT Support and Digital Lead Assistant
+      </div>
+    </div>
+
+    <div class="work-experience-item">
+      <img src="img/logos/comp_logos/kin_n_carta.png" width="50" height="50" />
+      <div class="work-text">
+        <strong>Kin + Carta</strong><br />
+        Web Administration & Support
+      </div>
+    </div>
+
+    <div class="work-experience-item">
+      <img src="img/logos/comp_logos/buildrefix.jfif" width="50" height="50" />
+      <div class="work-text">
+        <strong>BUILD REFIX</strong><br />
+        Lead Technician
+      </div>
+    </div>
+
+    <div class="work-experience-item">
+      <img src="img/logos/comp_logos/recast.png" width="50" height="50" />
+      <div class="work-text">
+        <strong>Recast</strong><br />
+        Technical Support Operative
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills & Certifications -->
+  <section class="section skills-certifications">
+    <div class="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>User Provisioning</li>
+        <li>Technical Understanding</li>
+        <li>Problem Solving</li>
+        <li>Product Support</li>
+        <li>Device Management</li>
+        <li>Windows, Linux, MacOS</li>
+        <li>IT Hardware Support</li>
+        <li>Web Development</li>
+        <li>Software Development</li>
+      </ul>
+    </div>
+
+    <div class="certifications">
+      <h2>Certifications</h2>
+      <ul>
+        <li>Introduction to Computer Science</li>
+        <li>Technical Support Fundamentals</li>
+        <li>Operating Systems: Windows, Linux, MacOS</li>
+        <li>Computer Networking</li>
+        <li>IT Security Fundamentals</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact">
+    <h2>Contact Me</h2>
+    <form
+      target="_blank"
+      action="https://formsubmit.co/roman.mamrukov@gmail.com"
+      method="POST"
+    >
+      <input type="text" name="name" class="form-control" placeholder="Full Name" required />
+      <input type="email" name="email" class="form-control" placeholder="Email Address" required />
+
+      <select id="subjectSelector" name="subject" class="form-control" required>
+        <option value="default">Subject:</option>
+        <option value="Work">Work</option>
+        <option value="Discus">Discussion</option>
+        <option value="inTouch">Get in Touch</option>
+      </select>
+
+      <textarea
+        placeholder="Your Message"
         class="form-control"
         name="message"
         rows="10"
-        required></textarea>
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_autoresponse" value="your custom message">
-        <button type="submit">Send</button>
-      </form>
+        required
+      ></textarea>
+
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_autoresponse" value="your custom message" />
+      <button type="submit">Send</button>
+    </form>
+
+    <div class="social-links">
+      <img src="img/logos/svg/linkedin.svg" width="25" height="25" />
+      <a href="https://www.linkedin.com/in/roman-mamrukov/">LinkedIn</a>
+
+      <img src="img/logos/svg/whatsapp.svg" width="25" height="25" />
+      <a href="https://wa.me/+447367771616">WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2024 Romans Mamrukovs.</p>
+      <ul class="footer-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="./works.html">Works</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
       <div class="social-links">
-        <img
-              src="img/logos/svg/linkedin.svg"
-              width="25"
-              height="25"
-            /><a href="https://www.linkedin.com/in/roman-mamrukov/">LinkedIn</a>
-        <img
-              src="img/logos/svg/whatsapp.svg"
-              width="25"
-              height="25"
-            /><a href="https://wa.me/+447367771616">WhatsApp</a>
-      </div>
-    </section>
+        <img src="img/logos/svg/linkedin.svg" width="25" height="25" />
+        <a href="https://www.linkedin.com/in/roman-mamrukov/">LinkedIn</a>
 
-    <!-- Footer Section -->
-    <footer class="footer">
-      <div class="footer-content">
-        <p>&copy; 2024 Romans Mamrukovs.</p>
-        <ul class="footer-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="./works.html">Works</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="social-links">
-          <img
-              src="img/logos/svg/linkedin.svg"
-              width="25"
-              height="25"
-            /><a href="https://www.linkedin.com/in/roman-mamrukov/">LinkedIn</a>
-            <img
-            src="img/logos/svg/github.svg"
-            width="25"
-            height="25"
-          /><a href="https://github.com/romanMamrukov/" target="_blank">GitHub</a>
-          <img
-              src="img/logos/svg/whatsapp.svg"
-              width="25"
-              height="25"
-            /><a href="https://wa.me/+447367771616">WhatsApp</a>
-        </div>
-      </div>
-    </footer>
+        <img src="img/logos/svg/github.svg" width="25" height="25" />
+        <a href="https://github.com/romanMamrukov/" target="_blank">GitHub</a>
 
-    <script src="script.js"></script>
-  </body>
+        <img src="img/logos/svg/whatsapp.svg" width="25" height="25" />
+        <a href="https://wa.me/+447367771616">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
 </html>
