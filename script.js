@@ -1,72 +1,105 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const navbar = document.querySelector('.navbar');
-    const sections = document.querySelectorAll('.section');
-    const burger = document.querySelector('.burger');
-    const navLinks = document.querySelector('.nav-links');
-    const buttons = document.querySelectorAll('.filter-btn');
-    const items = document.querySelectorAll('.work-item');
+  const navbar = document.querySelector('.navbar');
+  const sections = document.querySelectorAll('.section');
+  const burger = document.querySelector('.burger');
+  const navLinks = document.querySelector('.nav-links');
+  const buttons = document.querySelectorAll('.filter-btn');
+  const items = document.querySelectorAll('.work-item');
+  const rotatingText = document.getElementById('rotating-text');
 
-    function updateNavbarColors(section) {
-        if (section.classList.contains('about') || section.classList.contains('contact')) {
-            navbar.style.backgroundColor = '#fff';
-            navbar.style.color = '#0A6873';
-            navLinks.style.backgroundColor = '#fff';
-            navbar.querySelectorAll('a').forEach(link => link.style.color = '#0A6873');
-            burger.querySelectorAll('div').forEach(line => line.style.backgroundColor = '#0A6873');
-            navLinks.querySelectorAll('a').forEach(line => line.style.color = '#0A6873');
-        } else {
-            navbar.style.backgroundColor = '#043540';
-            navbar.style.color = '#fff';
-            navLinks.style.backgroundColor = '#043540';
-            navbar.querySelectorAll('a').forEach(link => link.style.color = '#fff');
-            burger.querySelectorAll('div').forEach(line => line.style.backgroundColor = '#50F268');
-            navLinks.querySelectorAll('a').forEach(line => line.style.color = '#fff');
-        }
+  const texts = [
+    "solutions for business",
+    "technical resolutions",
+    "websites",
+    "3D scenes",
+    "games",
+    "personal pages",
+    "tech tools"
+  ];
+
+  let index = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  // Navbar color handling
+  function setNavbarStyle(bgColor, textColor, burgerColor) {
+    navbar.style.backgroundColor = bgColor;
+    navbar.style.color = textColor;
+    navLinks.style.backgroundColor = bgColor;
+
+    navbar.querySelectorAll('a').forEach(link => link.style.color = textColor);
+    navLinks.querySelectorAll('a').forEach(link => link.style.color = textColor);
+    burger.querySelectorAll('div').forEach(line => line.style.backgroundColor = burgerColor);
+  }
+
+  function updateNavbarColors(section) {
+    if (section.classList.contains('about') || section.classList.contains('contact')) {
+      setNavbarStyle('#fff', '#0A6873', '#0A6873');
+    } else {
+      setNavbarStyle('#043540', '#fff', '#50F268');
     }
+  }
 
-    window.addEventListener('scroll', () => {
-        const scrollY = window.scrollY;
-        if (scrollY > window.innerHeight) {
-            navbar.classList.add('sticky');
-        } else {
-            navbar.classList.remove('sticky');
-        }
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    navbar.classList.toggle('sticky', scrollY > window.innerHeight);
 
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-
-            if (scrollY >= sectionTop - navbar.offsetHeight && scrollY < sectionTop + sectionHeight) {
-                updateNavbarColors(section);
-            }
-        });
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      if (scrollY >= sectionTop - navbar.offsetHeight && scrollY < sectionTop + sectionHeight) {
+        updateNavbarColors(section);
+      }
     });
+  });
 
-    // Set initial navbar colors based on the first section
-    updateNavbarColors(document.querySelector('.banner'));
+  updateNavbarColors(document.querySelector('.banner'));
 
-    // Burger menu toggle functionality
-    burger.addEventListener('click', () => {
-        burger.classList.toggle('active');
-        navLinks.classList.toggle('active');
-    });
+  // Burger toggle
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+  });
 
-    buttons.forEach(button => {
-        button.addEventListener('click', () => {
-          const filter = button.getAttribute('data-filter');
-    
-          // Remove active class from all buttons
-          buttons.forEach(btn => btn.classList.remove('active'));
-          // Add active class to the clicked button
-          button.classList.add('active');
-    
-          items.forEach(item => {
-            if (filter === 'all' || item.getAttribute('data-category') === filter) {
-              item.style.display = 'block';
-            } else {
-              item.style.display = 'none';
-            }
-          });
-        });
+  // Filter buttons
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const filter = button.dataset.filter;
+      buttons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+
+      items.forEach(item => {
+        item.style.display = (filter === 'all' || item.dataset.category === filter) ? 'block' : 'none';
       });
+    });
+  });
+
+  // Command line style typing effect
+  function typeEffect() {
+    if (!rotatingText) return;
+    
+    const currentText = texts[index];
+    const visibleText = currentText.substring(0, charIndex);
+
+    rotatingText.innerHTML = `${visibleText}<span class="cursor">█</span>`;
+
+    if (!isDeleting && charIndex < currentText.length) {
+      charIndex++;
+      setTimeout(typeEffect, 100);
+    } else if (isDeleting && charIndex > 0) {
+      charIndex--;
+      setTimeout(typeEffect, 50);
+    } else {
+      if (!isDeleting) {
+        isDeleting = true;
+        setTimeout(typeEffect, 1200);
+      } else {
+        isDeleting = false;
+        index = (index + 1) % texts.length;
+        setTimeout(typeEffect, 300);
+      }
+    }
+  }
+
+  typeEffect(); // Start typing effect
 });
