@@ -75,20 +75,23 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Command line style typing effect
+  const textNode = document.getElementById('rotating-text');
+  const cursor = document.querySelectro('.cursor');
+  
   function typeEffect() {
-    if (!rotatingText) return;
+    if (!textNode) return;
     
     const currentText = texts[index];
     const visibleText = currentText.substring(0, charIndex);
 
-    rotatingText.innerHTML = `${visibleText}<span class="cursor">█</span>`;
+    textNode.textContent = visibleText};
 
     if (!isDeleting && charIndex < currentText.length) {
       charIndex++;
-      setTimeout(typeEffect, 100);
+      setTimeout(typeEffect, 150);
     } else if (isDeleting && charIndex > 0) {
       charIndex--;
-      setTimeout(typeEffect, 50);
+      setTimeout(typeEffect, 100);
     } else {
       if (!isDeleting) {
         isDeleting = true;
