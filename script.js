@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Command line style typing effect
   const textNode = document.getElementById('rotating-text');
-  const cursor = document.querySelectro('.cursor');
+  const cursor = document.querySelector('.cursor');
   
   function typeEffect() {
     if (!textNode) return;
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const currentText = texts[index];
     const visibleText = currentText.substring(0, charIndex);
 
-    textNode.textContent = visibleText};
+    textNode.textContent = visibleText;
 
     if (!isDeleting && charIndex < currentText.length) {
       charIndex++;
