@@ -135,7 +135,7 @@ body {
   padding: 30px;
   display: flex;
   justify-content: center;
-  background-color: #043540;
+  background-color: var(--pri-cl);
   color: var(--tx-cl);
 }
 
@@ -263,6 +263,15 @@ body {
   text-align: center;
   margin-bottom: 20px;
   background-color: #043540;
+}
+
+.works-menu h2 {
+  margin: 16px;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  background-color: var(--pri-cl);
+  color: var(--tx-cl);
 }
 
 .works-menu button {
