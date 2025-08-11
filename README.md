@@ -55,7 +55,7 @@
 
 <br>
 
-<p>At the time of contact change, develop long-lasting skills</p>
+<p>At the time of constant change, develop long-lasting skills</p>
 
 <!--
 **romanMamrukov/romanMamrukov** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
