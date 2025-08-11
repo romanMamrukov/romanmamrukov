@@ -53,7 +53,7 @@ body {
 .navbar.sticky {
   position: fixed;
   animation: slideDown 0.2s ease;
-  z-index: 2;
+  z-index: 1000;
 }
 
 @keyframes slideDown {
@@ -64,6 +64,7 @@ body {
 .navbar .brand {
   font-size: 1.8em;
   margin: 16px;
+  z-index: 3;
 }
 
 .navbar ul {
@@ -123,6 +124,7 @@ body {
   width: 100%;
   background-color: #0A6873;
   align-items: center;
+  z-index: 999;
 }
 
 /* Section Headings */
@@ -417,6 +419,36 @@ body {
 .see-all-posts a:hover {
   background-color: #0A6873;
   transform: scale(1.05);
+}
+
+/* Blog search controlls */
+.blog-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* space between elements */
+  flex-wrap: wrap; /* allows stacking on small screens */
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+#blog-search,
+#category-filter {
+  margin: 20px auto;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #0A6873;
+  border-radius: 6px;
+}
+
+#blog-search {
+  flex: 1 1 250px; /* grows but has a min width */
+}
+
+#category-filter {
+  flex: 0 0 200px; /* fixed width */
+  background: white;
+  color: #0A6873;
 }
 
 /* Works Section */
