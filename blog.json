@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Welcome to My Blog",
+    "date": "2025-08-10",
+    "excerpt": "An introduction to my blog and what I plan to share here...",
+    "url": "blog/first-post.html",
+    "category": "General"
+  },
+  {
+    "title": "My Latest Project Deep Dive",
+    "date": "2025-08-07",
+    "excerpt": "Breaking down how I built my latest project, from idea to launch...",
+    "url": "blog/second-post.html",
+    "category": "Projects"
+  }
+]

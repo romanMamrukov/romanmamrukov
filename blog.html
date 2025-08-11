@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roman Mamrukov Portfolio Blog Archive</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Additional styles for blog archive page */
+    #blog-search {
+      max-width: 400px;
+      margin: 20px auto;
+      display: block;
+      padding: 10px;
+      font-size: 1rem;
+      border: 2px solid #0A6873;
+      border-radius: 6px;
+    }
+    #category-filter {
+      max-width: 400px;
+      margin: 10px auto 30px auto;
+      display: block;
+      padding: 8px;
+      font-size: 1rem;
+      border: 2px solid #0A6873;
+      border-radius: 6px;
+      background: white;
+      color: #0A6873;
+    }
+  </style>
+</head>
+<body>
+    <!-- Header / Navigation -->
+  <header id="home" class="banner">
+    <nav class="navbar">
+      <div class="brand">Roman Mamrukov</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="./works.html">Works</a></li>
+        <li><a href="./blog.html">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+    <div class="banner-content"></div>
+  </header>
+
+  <input type="search" id="blog-search" placeholder="Search blog posts..." />
+  <select id="category-filter">
+    <option value="">All Categories</option>
+  </select>
+
+  <section id="blog-archive" class="blog-grid container">
+    <!-- Blog posts will load here -->
+  </section>
+
+  <script>
+    async function loadAllBlogPosts() {
+      try {
+        const response = await fetch("blog.json");
+        const posts = await response.json();
+
+        const blogArchive = document.getElementById("blog-archive");
+        const searchInput = document.getElementById("blog-search");
+        const categoryFilter = document.getElementById("category-filter");
+
+        // Extract unique categories
+        const categories = Array.from(new Set(posts.map(p => p.category))).filter(c => c);
+
+        // Populate category filter options
+        categories.forEach(cat => {
+          const option = document.createElement("option");
+          option.value = cat;
+          option.textContent = cat;
+          categoryFilter.appendChild(option);
+        });
+
+        // Sort posts by date descending
+        posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+        function renderPosts(filteredPosts) {
+          blogArchive.innerHTML = "";
+          if (filteredPosts.length === 0) {
+            blogArchive.innerHTML = "<p style='grid-column: 1/-1; text-align:center;'>No posts found.</p>";
+            return;
+          }
+          filteredPosts.forEach(post => {
+            const card = document.createElement("div");
+            card.className = "blog-card";
+            card.innerHTML = `
+              <div class="blog-card-content">
+                <h3>${post.title}</h3>
+                <p>${post.excerpt}</p>
+                <a href="${post.url}">Read More →</a>
+              </div>
+            `;
+            blogArchive.appendChild(card);
+          });
+        }
+
+        function filterPosts() {
+          const query = searchInput.value.toLowerCase();
+          const selectedCategory = categoryFilter.value;
+
+          const filtered = posts.filter(post => {
+            const matchesCategory = selectedCategory ? post.category === selectedCategory : true;
+            const matchesSearch = post.title.toLowerCase().includes(query) || post.excerpt.toLowerCase().includes(query);
+            return matchesCategory && matchesSearch;
+          });
+
+          renderPosts(filtered);
+        }
+
+        // Initial render
+        renderPosts(posts);
+
+        // Event listeners
+        searchInput.addEventListener("input", filterPosts);
+        categoryFilter.addEventListener("change", filterPosts);
+      } catch (error) {
+        console.error("Error loading blog posts:", error);
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", loadAllBlogPosts);
+  </script>
+</body>
+</html>
