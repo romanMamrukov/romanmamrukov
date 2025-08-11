@@ -36,31 +36,65 @@ async function loadAllBlogPosts() {
     const response = await fetch("blog.json");
     const posts = await response.json();
 
+    // Sort posts by date descending
+    posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    // BLOG ARCHIVE PAGE
     const blogArchive = document.getElementById("blog-archive");
     const searchInput = document.getElementById("blog-search");
     const categoryFilter = document.getElementById("category-filter");
 
-    // Extract unique categories
-    const categories = Array.from(new Set(posts.map(p => p.category))).filter(c => c);
+    if (blogArchive && searchInput && categoryFilter) {
+      // Extract unique categories
+      const categories = Array.from(new Set(posts.map(p => p.category))).filter(c => c);
+      categories.forEach(cat => {
+        const option = document.createElement("option");
+        option.value = cat;
+        option.textContent = cat;
+        categoryFilter.appendChild(option);
+      });
 
-    // Populate category filter options
-    categories.forEach(cat => {
-      const option = document.createElement("option");
-      option.value = cat;
-      option.textContent = cat;
-      categoryFilter.appendChild(option);
-    });
-
-    // Sort posts by date descending
-    posts.sort((a, b) => new Date(b.date) - new Date(a.date));
-
-    function renderPosts(filteredPosts) {
-      blogArchive.innerHTML = "";
-      if (filteredPosts.length === 0) {
-        blogArchive.innerHTML = "<p style='grid-column: 1/-1; text-align:center;'>No posts found.</p>";
-        return;
+      function renderArchive(filteredPosts) {
+        blogArchive.innerHTML = "";
+        if (filteredPosts.length === 0) {
+          blogArchive.innerHTML = "<p style='grid-column: 1/-1; text-align:center;'>No posts found.</p>";
+          return;
+        }
+        filteredPosts.forEach(post => {
+          const card = document.createElement("div");
+          card.className = "blog-card";
+          card.innerHTML = `
+            <div class="blog-card-content">
+              <h3>${post.title}</h3>
+              <p>${post.excerpt}</p>
+              <a href="${post.url}">Read More →</a>
+            </div>
+          `;
+          blogArchive.appendChild(card);
+        });
       }
-      filteredPosts.forEach(post => {
+
+      function filterPosts() {
+        const query = searchInput.value.toLowerCase();
+        const selectedCategory = categoryFilter.value;
+        const filtered = posts.filter(post => {
+          const matchesCategory = selectedCategory ? post.category === selectedCategory : true;
+          const matchesSearch = post.title.toLowerCase().includes(query) || post.excerpt.toLowerCase().includes(query);
+          return matchesCategory && matchesSearch;
+        });
+        renderArchive(filtered);
+      }
+
+      renderArchive(posts);
+      searchInput.addEventListener("input", filterPosts);
+      categoryFilter.addEventListener("change", filterPosts);
+    }
+
+    // RECENT POSTS SECTION (MAIN PAGE)
+    const recentBlogList = document.getElementById("recent-blog-list");
+    if (recentBlogList) {
+      recentBlogList.innerHTML = "";
+      posts.slice(0, 3).forEach(post => { // show only latest 3
         const card = document.createElement("div");
         card.className = "blog-card";
         card.innerHTML = `
@@ -70,33 +104,15 @@ async function loadAllBlogPosts() {
             <a href="${post.url}">Read More →</a>
           </div>
         `;
-        blogArchive.appendChild(card);
+        recentBlogList.appendChild(card);
       });
     }
 
-    function filterPosts() {
-      const query = searchInput.value.toLowerCase();
-      const selectedCategory = categoryFilter.value;
-
-      const filtered = posts.filter(post => {
-        const matchesCategory = selectedCategory ? post.category === selectedCategory : true;
-        const matchesSearch = post.title.toLowerCase().includes(query) || post.excerpt.toLowerCase().includes(query);
-        return matchesCategory && matchesSearch;
-      });
-
-      renderPosts(filtered);
-    }
-
-    // Initial render
-    renderPosts(posts);
-
-    // Event listeners
-    searchInput.addEventListener("input", filterPosts);
-    categoryFilter.addEventListener("change", filterPosts);
   } catch (error) {
     console.error("Error loading blog posts:", error);
   }
 }
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const navbar = document.querySelector('.navbar');
