@@ -1,3 +1,35 @@
+// GitHub Recent Projects Loader
+async function loadRecentProjects() {
+  const username = "romanmamrukov"; // Your GitHub username
+  const reposUrl = `https://api.github.com/users/${username}/repos?sort=updated&per_page=6`;
+
+  try {
+    const response = await fetch(reposUrl);
+    const repos = await response.json();
+
+    const projectsList = document.getElementById("recent-projects-list");
+    if (!projectsList) return; // Don't run if section not on page
+    projectsList.innerHTML = "";
+
+    repos.forEach(repo => {
+      const card = document.createElement("div");
+      card.className = "project-card";
+
+      card.innerHTML = `
+        <img src="https://opengraph.githubassets.com/1/${username}/${repo.name}" alt="${repo.name}">
+        <div class="project-card-content">
+          <h3>${repo.name}</h3>
+          <p>${repo.description || "No description available"}</p>
+          <a href="${repo.html_url}" target="_blank">View Project</a>
+        </div>
+      `;
+      projectsList.appendChild(card);
+    });
+  } catch (error) {
+    console.error("Error loading GitHub projects:", error);
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const navbar = document.querySelector('.navbar');
   const sections = document.querySelectorAll('.section');
@@ -105,4 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   typeEffect(); // Start typing effect
+
+  // Load GitHub recent projects if section exists
+  loadRecentProjects();
 });
