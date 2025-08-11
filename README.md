@@ -1,9 +1,9 @@
 <h1>Hi there, I'm <a href="https://github.com/romanmamrukov" target="_blank">Roman</a></h1>
-<h3>Software, Games & Web developer from Latvia</h3>
+<h3>Web, Software & Games developer from Latvia</h3>
 
 <br>
 
-<p> I currently implement digital solutions.</p>
+<p> I implement digital solutions.</p>
 
 <be>
 
@@ -14,6 +14,8 @@
 <div>
   <p>Languages</p>
   <img  height="56" src="img/langs/js.png" alt ='js'>
+  <img  height="56" src="img/langs/css.svg" alt ='css'>
+  <img  height="56" src="img/langs/html5.svg" alt ='html5'>
   <img  height="56" src="img/langs/java.png" alt ='java'>
   <img  height="56" src="img/langs/c-sharp.png" alt ='c#'>
   <img  height="56" src="img/langs/c-.png" alt ='cpp'>
@@ -38,14 +40,22 @@
   <img  height="56" src="img/IDE/vscode.png" alt ='vscode'>
   <img  height="56" src="img/IDE/vs.png" alt ='visual studio'>
   <img  height="56" src="img/IDE/eclipse.png" alt ='eclipse'>
-
+  <img  height="56" src="img/IDE/vim.svg" alt ='vim'>
 </div>
 
 <br>
+<br>
 
+<div>
+  <p>OS</p>
+  <img  height="56" src="img/OS/windows.svg" alt ='windows'>
+  <img  height="56" src="img/OS/linux.svg" alt ='linux'>
+</div>
 ---
 
 <br>
+
+<p>At the time of constact change, develop long lasting skills</p>
 
 <!--
 **romanMamrukov/romanMamrukov** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
