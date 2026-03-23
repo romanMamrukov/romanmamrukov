@@ -452,6 +452,15 @@ body {
   color: #0A6873;
 }
 
+/* Blog Post */
+
+.blog-post {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
 /* Works Section */
 .works {
   background-color: #04354050;
