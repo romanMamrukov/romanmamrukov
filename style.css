@@ -527,17 +527,20 @@ body {
 }
 
 .work-item:nth-child(3) img,
-.work-item:nth-child(4) img {
+.work-item:nth-child(4) img,
+.work-item:nth-child(7) img,
+.work-item:nth-child(13) img {
   width: 200px;
   height: 70px;
 }
 
-.work-item:nth-child(10) img {
+.work-item:nth-child(11) img,
+.work-item:nth-child(14) img {
   width: 100px;
   height: 150px;
 }
 
-.work-item:nth-child(11) img {
+.work-item:nth-child(12) img {
   width: 75px;
   height: 150px;
 }

@@ -40,7 +40,6 @@
   <img  height="56" src="img/IDE/vscode.png" alt ='vscode'>
   <img  height="56" src="img/IDE/vs.png" alt ='visual studio'>
   <img  height="56" src="img/IDE/eclipse.png" alt ='eclipse'>
-  <img  height="56" src="img/IDE/vim.svg" alt ='vim'>
 </div>
 
 <br>
