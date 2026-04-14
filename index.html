@@ -1,40 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Roman Mamrukov Portfolio</title>
-  
+
   <!-- Critical CSS for instant initial < 14kb load -->
   <style>
-    body, html { margin: 0; padding: 0; height: 100%; font-family: Arial, sans-serif; background-color: #0D1E23; color: #EDF3F4; overflow-x: hidden; }
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background-color: #0D1E23;
+      color: #EDF3F4;
+      overflow-x: hidden;
+    }
+
     #intro-screen {
-      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-      display: flex; flex-direction: column; justify-content: center; align-items: center;
-      background: #042F3D; color: #fff; z-index: 9999;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: #042F3D;
+      color: #fff;
+      z-index: 9999;
       transition: transform 1s ease-in-out;
     }
-    #intro-screen h1 { margin: 0.5em 2em; text-align: center; }
-    #intro-screen p { max-width: 300px; text-align: center; }
+
+    #intro-screen h1 {
+      margin: 0.5em 2em;
+      text-align: center;
+    }
+
+    #intro-screen p {
+      max-width: 300px;
+      text-align: center;
+    }
+
     #intro-screen button {
-      margin-top: 2em; padding: 0.6em 1.5em; border: none; background: #50C684; color: #042F3D;
-      font-weight: bold; cursor: pointer; border-radius: 6px; transition: background 0.3s;
+      margin-top: 2em;
+      padding: 0.6em 1.5em;
+      border: none;
+      background: #50C684;
+      color: #042F3D;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: background 0.3s;
     }
-    #intro-screen button:hover { background: #45b57a; }
-    body.site-entered #intro-screen { transform: translateY(-100%); pointer-events: none; }
-    
+
+    #intro-screen button:hover {
+      background: #45b57a;
+    }
+
+    body.site-entered #intro-screen {
+      transform: translateY(-100%);
+      pointer-events: none;
+    }
+
     .navbar {
-      position: absolute; top: 0; width: 100%; height: 80px; display: flex; justify-content: space-between; align-items: center;
-      background-color: transparent; color: #DBE4E5; z-index: 1000; transition: all 0.5s ease;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: transparent;
+      color: #DBE4E5;
+      z-index: 1000;
+      transition: all 0.5s ease;
     }
-    .navbar .brand { font-size: 1.8em; margin: 16px; font-weight: bold; }
-    
+
+    .navbar .brand {
+      font-size: 1.8em;
+      margin: 16px;
+      font-weight: bold;
+    }
+
     /* SPA views holding class */
-    .spa-view { display: none; width: 100%; }
-    .spa-view.active { display: block; animation: fadeInView 0.5s ease; }
-    @keyframes fadeInView { from {opacity: 0} to {opacity: 1} }
-    
-    #main-content { min-height: 100vh; }
+    .spa-view {
+      display: none;
+      width: 100%;
+    }
+
+    .spa-view.active {
+      display: block;
+      animation: fadeInView 0.5s ease;
+    }
+
+    @keyframes fadeInView {
+      from {
+        opacity: 0
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    #main-content {
+      min-height: 100vh;
+    }
   </style>
 
   <!-- Google tag (gtag.js) -->
@@ -48,7 +123,9 @@
 
   <!-- Asynchronously load the main stylesheet -->
   <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="style.css"></noscript>
+  <noscript>
+    <link rel="stylesheet" href="style.css">
+  </noscript>
 </head>
 
 <body>
@@ -88,11 +165,13 @@
         <div class="about-content">
           <img src="img/logos/personal_img.png" alt="my photo" class="about-image" loading="lazy" decoding="async" />
           <div class="about-text">
-            <div class="terminal">  
+            <div class="terminal">
               <p>&gt; Hello, I create <span id="rotating-text"></span><span class="cursor">█</span></p>
             </div>
-            <p>I'm a Technical Specialist with experience in software & hardware support, networking, and IT security.</p>
-            <p>I also craft creative digital solutions, including modern websites, immersive 3D visuals, and interactive user experiences.</p>
+            <p>I'm a Technical Specialist with experience in software & hardware support, networking, and IT security.
+            </p>
+            <p>I also craft creative digital solutions, including modern websites, immersive 3D visuals, and interactive
+              user experiences.</p>
           </div>
           <div class="social-links">
             <img src="img/logos/svg/linkedin.svg" width="25" height="25" loading="lazy" decoding="async" />
@@ -106,7 +185,9 @@
       </section>
 
       <!-- Work Experience Heading -->
-      <section class="section"><h2>Work Expirience</h2></section>
+      <section class="section">
+        <h2>Work Expirience</h2>
+      </section>
 
       <!-- Work Experience List -->
       <section class="section work-experience">
@@ -115,7 +196,8 @@
           <div class="work-text"><strong>Acolad</strong><br />IT Support and Helpdesk Analyst</div>
         </div>
         <div class="work-experience-item">
-          <img src="img/logos/comp_logos/schneider_electric.png" width="50" height="50" loading="lazy" decoding="async" />
+          <img src="img/logos/comp_logos/schneider_electric.png" width="50" height="50" loading="lazy"
+            decoding="async" />
           <div class="work-text"><strong>Schneider Electric</strong><br />IT Support and Digital Lead Assistant</div>
         </div>
         <div class="work-experience-item">
@@ -137,16 +219,25 @@
         <div class="skills">
           <h2>Skills</h2>
           <ul>
-            <li>User Provisioning</li><li>Technical Understanding</li><li>Problem Solving</li>
-            <li>Product Support</li><li>Device Management</li><li>Windows, Linux, MacOS</li>
-            <li>IT Hardware Support</li><li>Web Development</li><li>Software Development</li>
+            <li>User Provisioning</li>
+            <li>Technical Understanding</li>
+            <li>Problem Solving</li>
+            <li>Product Support</li>
+            <li>Device Management</li>
+            <li>Windows, Linux, MacOS</li>
+            <li>IT Hardware Support</li>
+            <li>Web Development</li>
+            <li>Software Development</li>
           </ul>
         </div>
         <div class="certifications">
           <h2>Certifications</h2>
           <ul>
-            <li>Introduction to Computer Science</li><li>Technical Support Fundamentals</li>
-            <li>Operating Systems: Windows, Linux, MacOS</li><li>Computer Networking</li><li>IT Security Fundamentals</li>
+            <li>Introduction to Computer Science</li>
+            <li>Technical Support Fundamentals</li>
+            <li>Operating Systems: Windows, Linux, MacOS</li>
+            <li>Computer Networking</li>
+            <li>IT Security Fundamentals</li>
           </ul>
         </div>
       </section>
@@ -175,8 +266,10 @@
           <input type="text" name="name" class="form-control" placeholder="Full Name" required />
           <input type="email" name="email" class="form-control" placeholder="Email Address" required />
           <select id="subjectSelector" name="subject" class="form-control" required>
-            <option value="default">Subject:</option><option value="Work">Work</option>
-            <option value="Discus">Discussion</option><option value="inTouch">Get in Touch</option>
+            <option value="default">Subject:</option>
+            <option value="Work">Work</option>
+            <option value="Discus">Discussion</option>
+            <option value="inTouch">Get in Touch</option>
           </select>
           <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
           <input type="hidden" name="_captcha" value="false" />
@@ -194,7 +287,7 @@
 
     <!-- VIEW 2: Works Archive -->
     <div id="view-works" class="spa-view">
-      <section id="works-page" class="section works" style="padding-top: 80px;">
+      <section id="works-page" class="section works">
         <div class="works-menu">
           <h2>Projects</h2>
           <button class="filter-btn active" data-filter="all">All</button>
@@ -214,7 +307,9 @@
       <section id="blog-page" style="padding-top: 100px;">
         <div class="blog-controls">
           <input type="search" id="blog-search" placeholder="Search blog posts..." />
-          <select id="category-filter"><option value="">All Categories</option></select>
+          <select id="category-filter">
+            <option value="">All Categories</option>
+          </select>
         </div>
         <div id="blog-archive" class="blog-grid container"></div>
       </section>
@@ -252,4 +347,5 @@
     }
   </script>
 </body>
+
 </html>

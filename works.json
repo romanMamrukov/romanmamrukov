@@ -4,127 +4,244 @@
     "title": "Tagrolat Website",
     "img": "https://static.wixstatic.com/media/2a8e49_a50fea740d414453a3c2686912e6a003~mv2.png/v1/fill/w_118,h_103,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/result.png",
     "alt": "Tagrolat logo",
-    "description": ["Company website to show information about them and their products"],
-    "links": [{"text": "TAGROLAT Website", "url": "https://www.tagrolat.lv/"}]
+    "description": [
+      "Company website to show information about them and their products"
+    ],
+    "links": [
+      {
+        "text": "TAGROLAT Website",
+        "url": "https://www.tagrolat.lv/"
+      }
+    ]
   },
   {
     "category": "web",
     "title": "Build ReFix Website",
-    "img": "img/logos/buildrefix.jfif",
+    "img": "img/logos/proj/buildrefix.jfif",
     "alt": "BuildReFix Logo",
-    "description": ["One Stop Shop for All Electonic Support"],
-    "links": [{"text": "BUILDREFIX Website", "url": "https://buildrefix.bitbucket.io/"}]
+    "description": [
+      "One Stop Shop for All Electonic Support"
+    ],
+    "links": [
+      {
+        "text": "BUILDREFIX Website",
+        "url": "https://buildrefix.bitbucket.io/"
+      }
+    ]
   },
   {
     "category": "web",
     "title": "Entrega Website",
-    "img": "img/logos/entrega.png",
+    "img": "img/logos/proj/entrega.png",
     "alt": "Entrega Logo",
-    "description": ["Entrega - your partner for all cargo delivery"],
-    "links": [{"text": "Entrega Website", "url": "https://www.entrega.lv/"}]
+    "description": [
+      "Entrega - your partner for all cargo delivery"
+    ],
+    "links": [
+      {
+        "text": "Entrega Website",
+        "url": "https://www.entrega.lv/"
+      }
+    ]
   },
   {
     "category": "web",
     "title": "Website Test Bench",
-    "img": "img/logos/webtestbench_logo.png",
+    "img": "img/logos/proj/webtestbench_logo.png",
     "alt": "Website Test Bench Logo",
-    "description": ["Inspiration from online code playgrounds like CodePen and JSFiddle."],
-    "links": [{"text": "Website Test Bench", "url": "https://romanmamrukov.github.io/webtestbench/"}]
+    "description": [
+      "Inspiration from online code playgrounds like CodePen and JSFiddle."
+    ],
+    "links": [
+      {
+        "text": "Website Test Bench",
+        "url": "https://romanmamrukov.github.io/webtestbench/"
+      }
+    ]
   },
   {
     "category": "web",
     "title": "Responsive Display Test",
-    "img": "img/logos/rdw_logo.png",
+    "img": "img/logos/proj/rdw_logo.png",
     "alt": "Responsive Display Test Logo",
-    "description": ["Inspiration to test websites on different devices as additional test instead of browser dev tool."],
-    "links": [{"text": "Responsive Display Test", "url": "https://romanmamrukov.github.io/rdwtest/"}]
+    "description": [
+      "Inspiration to test websites on different devices as additional test instead of browser dev tool."
+    ],
+    "links": [
+      {
+        "text": "Responsive Display Test",
+        "url": "https://romanmamrukov.github.io/rdwtest/"
+      }
+    ]
   },
   {
     "category": "web",
     "title": "ALUS BODE Website",
-    "img": "img/logos/alusbode.png",
+    "img": "img/logos/proj/alusbode.png",
     "alt": "Alus Bode Logo",
-    "description": ["ALUS BODE - Beer is the answer, but I forgot a question"],
-    "links": [{"text": "Alus Bode Website", "url": "https://alusbode.lv"}]
+    "description": [
+      "ALUS BODE - Beer is the answer, but I forgot a question"
+    ],
+    "links": [
+      {
+        "text": "Alus Bode Website",
+        "url": "https://alusbode.lv"
+      }
+    ]
   },
   {
     "category": "web",
     "title": "Personal Games Website",
-    "img": "img/logos/gamesWebsite.png",
+    "img": "img/logos/proj/gamesWebsite.png",
     "alt": "Games Website Logo",
-    "description": ["Website where listed all my games"],
-    "links": [{"text": "Website", "url": "https://romanmamrukov.github.io/ag_proj/"}]
+    "description": [
+      "Website where listed all my games"
+    ],
+    "links": [
+      {
+        "text": "Website",
+        "url": "https://romanmamrukov.github.io/ag_proj/"
+      }
+    ]
   },
   {
     "category": "3D",
     "title": "3D Works on ArtStation",
-    "img": "img/logos/altersea.png",
+    "img": "img/logos/proj/altersea.png",
     "alt": "AlterSea Logo",
-    "description": ["Some 3D artworks"],
-    "links": [{"text": "ArtStation Profile", "url": "https://www.artstation.com/romanmamrukov"}]
+    "description": [
+      "Some 3D artworks"
+    ],
+    "links": [
+      {
+        "text": "ArtStation Profile",
+        "url": "https://www.artstation.com/romanmamrukov"
+      }
+    ]
   },
   {
     "category": "games",
     "title": "Games Demos",
-    "img": "img/logos/altersea.png",
+    "img": "img/logos/proj/altersea.png",
     "alt": "AlterSea Logo",
-    "description": ["See all game demos on itch.io"],
-    "links": [{"text": "itch.io Profile", "url": "https://romanm.itch.io/"}]
+    "description": [
+      "See all game demos on itch.io"
+    ],
+    "links": [
+      {
+        "text": "itch.io Profile",
+        "url": "https://romanm.itch.io/"
+      }
+    ]
   },
   {
     "category": "games",
     "title": "Games Demos Videos",
-    "img": "img/logos/altersea.png",
+    "img": "img/logos/proj/altersea.png",
     "alt": "AlterSea Logo",
-    "description": ["See games demos video on Youtube"],
-    "links": [{"text": "Youtube playlist", "url": "https://www.youtube.com/playlist?list=PLSpXPNzPKRK4kVBP6I_MAm_zoIpZC3r2C"}]
+    "description": [
+      "See games demos video on Youtube"
+    ],
+    "links": [
+      {
+        "text": "Youtube playlist",
+        "url": "https://www.youtube.com/playlist?list=PLSpXPNzPKRK4kVBP6I_MAm_zoIpZC3r2C"
+      }
+    ]
   },
   {
     "category": "games",
     "title": "Tic-Tac-Toe webgame",
-    "img": "img/logos/tictactoeGame.jpg",
+    "img": "img/logos/proj/tictactoeGame.jpg",
     "alt": "TicTacToe game",
-    "description": ["Classic game Tic-Tac-Toe made in a browser"],
-    "links": [{"text": "Tic-Tac-Toe Game", "url": "https://romanmamrukov.github.io/TicTacToeWebGame/"}]
+    "description": [
+      "Classic game Tic-Tac-Toe made in a browser"
+    ],
+    "links": [
+      {
+        "text": "Tic-Tac-Toe Game",
+        "url": "https://romanmamrukov.github.io/TicTacToeWebGame/"
+      }
+    ]
   },
   {
     "category": "games",
     "title": "Snake webgame",
-    "img": "img/logos/snakeGame.jpg",
+    "img": "img/logos/proj/snakeGame.jpg",
     "alt": "Snake game",
-    "description": ["Classic Snake game made in a browser in Nokia style"],
-    "links": [{"text": "Snake Game", "url": "https://romanmamrukov.github.io/snakegame/"}]
+    "description": [
+      "Classic Snake game made in a browser in Nokia style"
+    ],
+    "links": [
+      {
+        "text": "Snake Game",
+        "url": "https://romanmamrukov.github.io/snakegame/"
+      }
+    ]
   },
   {
     "category": "games",
     "title": "Guess an object",
-    "img": "img/logos/guessgame.png",
+    "img": "img/logos/proj/guessgame.png",
     "alt": "guess game",
-    "description": ["Guess the object based on image of its part"],
-    "links": [{"text": "Guess an object", "url": "https://romanmamrukov.github.io/guessGame/"}]
+    "description": [
+      "Guess the object based on image of its part"
+    ],
+    "links": [
+      {
+        "text": "Guess an object",
+        "url": "https://romanmamrukov.github.io/guessGame/"
+      }
+    ]
   },
   {
     "category": "games",
     "title": "Idle Startup Clicker",
-    "img": "img/logos/idlestartupclicker.png",
+    "img": "img/logos/proj/idlestartupclicker.png",
     "alt": "idle startup clicker game",
-    "description": ["Idle Startup Clicker - Build your tech startup empire from a single line of code"],
-    "links": [{"text": "Idle Startup Clicker", "url": "https://idleStartupClicker.online/"}]
+    "description": [
+      "Idle Startup Clicker - Build your tech startup empire from a single line of code"
+    ],
+    "links": [
+      {
+        "text": "Idle Startup Clicker",
+        "url": "https://idleStartupClicker.online/"
+      }
+    ]
   },
   {
     "category": "soft",
     "title": "QR Generator",
-    "img": "img/logos/QRGen Github.png",
+    "img": "img/logos/proj/QRGen Github.png",
     "alt": "QR img",
-    "description": ["Created QR Generator from Excel with Python", "QR Generator website for links and WiFi access"],
-    "links": [{"text": "Git page", "url": "https://github.com/romanMamrukov/qrGenerator"}, {"text": "Website", "url": "https://romanmamrukov.github.io/qrGenerator/"}]
+    "description": [
+      "Created QR Generator from Excel with Python",
+      "QR Generator website for links and WiFi access"
+    ],
+    "links": [
+      {
+        "text": "Git page",
+        "url": "https://github.com/romanMamrukov/qrGenerator"
+      },
+      {
+        "text": "Website",
+        "url": "https://romanmamrukov.github.io/qrGenerator/"
+      }
+    ]
   },
   {
     "category": "soft",
     "title": "TG bot for registration & invoices",
-    "img": "img/logos/tg_project_logo.png",
+    "img": "img/logos/proj/tg_project_logo.png",
     "alt": "Telegram logo",
-    "description": ["Bot for registration and invoices generator in PDF"],
-    "links": [{"text": "Git page", "url": "https://github.com/romanMamrukov/tg-bot-reg-pdf"}]
+    "description": [
+      "Bot for registration and invoices generator in PDF"
+    ],
+    "links": [
+      {
+        "text": "Git page",
+        "url": "https://github.com/romanMamrukov/tg-bot-reg-pdf"
+      }
+    ]
   }
 ]
