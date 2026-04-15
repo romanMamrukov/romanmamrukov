@@ -211,6 +211,22 @@
   },
   {
     "category": "soft",
+    "title": "Freelancer Time Tracker",
+    "img": "img/logos/proj/ITOpsConsole.png",
+    "alt": "ITOpsConsole Logo",
+    "description": [
+      "Created dashboard to track time for freelancers and generate invoces in PDF",
+      "All works localy, instructions are provided in GitHub readme file"
+    ],
+    "links": [
+      {
+        "text": "Git page",
+        "url": "https://github.com/romanMamrukov/freemgsys"
+      }
+    ]
+  },
+  {
+    "category": "soft",
     "title": "QR Generator",
     "img": "img/logos/proj/QRGen Github.png",
     "alt": "QR img",
