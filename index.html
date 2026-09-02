@@ -1,351 +1,142 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Roman Mamrukov Portfolio</title>
-
-  <!-- Critical CSS for instant initial < 14kb load -->
-  <style>
-    body,
-    html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      font-family: Arial, sans-serif;
-      background-color: #0D1E23;
-      color: #EDF3F4;
-      overflow-x: hidden;
-    }
-
-    #intro-screen {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background: #042F3D;
-      color: #fff;
-      z-index: 9999;
-      transition: transform 1s ease-in-out;
-    }
-
-    #intro-screen h1 {
-      margin: 0.5em 2em;
-      text-align: center;
-    }
-
-    #intro-screen p {
-      max-width: 300px;
-      text-align: center;
-    }
-
-    #intro-screen button {
-      margin-top: 2em;
-      padding: 0.6em 1.5em;
-      border: none;
-      background: #50C684;
-      color: #042F3D;
-      font-weight: bold;
-      cursor: pointer;
-      border-radius: 6px;
-      transition: background 0.3s;
-    }
-
-    #intro-screen button:hover {
-      background: #45b57a;
-    }
-
-    body.site-entered #intro-screen {
-      transform: translateY(-100%);
-      pointer-events: none;
-    }
-
-    .navbar {
-      position: absolute;
-      top: 0;
-      width: 100%;
-      height: 80px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: transparent;
-      color: #DBE4E5;
-      z-index: 1000;
-      transition: all 0.5s ease;
-    }
-
-    .navbar .brand {
-      font-size: 1.8em;
-      margin: 16px;
-      font-weight: bold;
-    }
-
-    /* SPA views holding class */
-    .spa-view {
-      display: none;
-      width: 100%;
-    }
-
-    .spa-view.active {
-      display: block;
-      animation: fadeInView 0.5s ease;
-    }
-
-    @keyframes fadeInView {
-      from {
-        opacity: 0
-      }
-
-      to {
-        opacity: 1
-      }
-    }
-
-    #main-content {
-      min-height: 100vh;
-    }
-  </style>
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCCEWV3WEY"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-MCCEWV3WEY');
-  </script>
-
-  <!-- Asynchronously load the main stylesheet -->
-  <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
-  <noscript>
-    <link rel="stylesheet" href="style.css">
-  </noscript>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Roman Mamrukov builds reliable business websites, workflow systems and automation for small businesses and independent professionals.">
+  <meta name="theme-color" content="#101715">
+  <meta property="og:title" content="Roman Mamrukov — Engineering digital systems for real business">
+  <meta property="og:description" content="Business websites, operational tools and automation built with an engineer's attention to reliability.">
+  <meta property="og:type" content="website">
+  <title>Roman Mamrukov — Engineer, Product Builder & Automation Specialist</title>
+  <link rel="canonical" href="https://romanmamrukov.github.io/romanmamrukov/">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./script.js" defer></script>
 </head>
-
 <body>
-  <!-- Intro Screen -->
-  <div id="intro-screen">
-    <h1>Hi, I’m Romans Mamrukovs</h1>
-    <p>I'm a Technical Specialist with experience in software & hardware support, networking, and IT security.</p>
-    <button onclick="enterSite()">Enter Site</button>
-  </div>
-
-  <div id="main-content">
-    <!-- Header / Navigation -->
-    <header id="home" class="banner">
-      <nav class="navbar">
-        <div class="brand">Roman Mamrukov</div>
-        <ul class="nav-links">
-          <li><a href="#home" class="nav-item">Home</a></li>
-          <li><a href="#about" class="nav-item">About</a></li>
-          <li><a href="#view-works" class="nav-item">Works</a></li>
-          <li><a href="#view-blog" class="nav-item">Blog</a></li>
-          <li><a href="#contact" class="nav-item">Contact</a></li>
-        </ul>
-        <div class="burger">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </div>
-      </nav>
-      <div class="banner-content"></div>
-    </header>
-
-    <!-- VIEWS -->
-    <!-- VIEW 1: Main Landing -->
-    <div id="view-home" class="spa-view active">
-      <!-- About Section -->
-      <section id="about" class="section about">
-        <div class="about-content">
-          <img src="img/logos/personal_img.png" alt="my photo" class="about-image" loading="lazy" decoding="async" />
-          <div class="about-text">
-            <div class="terminal">
-              <p>&gt; Hello, I create <span id="rotating-text"></span><span class="cursor">█</span></p>
-            </div>
-            <p>I'm a Technical Specialist with experience in software & hardware support, networking, and IT security.
-            </p>
-            <p>I also craft creative digital solutions, including modern websites, immersive 3D visuals, and interactive
-              user experiences.</p>
-          </div>
-          <div class="social-links">
-            <img src="img/logos/svg/linkedin.svg" width="25" height="25" loading="lazy" decoding="async" />
-            <a href="https://www.linkedin.com/in/roman-mamrukov/">LinkedIn</a>
-            <img src="img/logos/svg/github.svg" width="25" height="25" loading="lazy" decoding="async" />
-            <a href="https://github.com/romanMamrukov/" target="_blank">GitHub</a>
-            <img src="img/logos/svg/resume.svg" width="25" height="25" loading="lazy" decoding="async" />
-            <a href="https://www.self.so/romansmamrukovs-uc8yxi" target="_blank">Resume</a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Work Experience Heading -->
-      <section class="section">
-        <h2>Work Expirience</h2>
-      </section>
-
-      <!-- Work Experience List -->
-      <section class="section work-experience">
-        <div class="work-experience-item">
-          <img src="img/logos/comp_logos/acolad.png" width="50" height="50" loading="lazy" decoding="async" />
-          <div class="work-text"><strong>Acolad</strong><br />IT Support and Helpdesk Analyst</div>
-        </div>
-        <div class="work-experience-item">
-          <img src="img/logos/comp_logos/schneider_electric.png" width="50" height="50" loading="lazy"
-            decoding="async" />
-          <div class="work-text"><strong>Schneider Electric</strong><br />IT Support and Digital Lead Assistant</div>
-        </div>
-        <div class="work-experience-item">
-          <img src="img/logos/comp_logos/kin_n_carta.png" width="50" height="50" loading="lazy" decoding="async" />
-          <div class="work-text"><strong>Kin + Carta</strong><br />Web Administration & Support</div>
-        </div>
-        <div class="work-experience-item">
-          <img src="img/logos/comp_logos/buildrefix.jfif" width="50" height="50" loading="lazy" decoding="async" />
-          <div class="work-text"><strong>BUILD REFIX</strong><br />Lead Technician</div>
-        </div>
-        <div class="work-experience-item">
-          <img src="img/logos/comp_logos/recast.png" width="50" height="50" loading="lazy" decoding="async" />
-          <div class="work-text"><strong>Recast</strong><br />Technical Support Operative</div>
-        </div>
-      </section>
-
-      <!-- Skills & Certifications -->
-      <section class="section skills-certifications">
-        <div class="skills">
-          <h2>Skills</h2>
-          <ul>
-            <li>User Provisioning</li>
-            <li>Technical Understanding</li>
-            <li>Problem Solving</li>
-            <li>Product Support</li>
-            <li>Device Management</li>
-            <li>Windows, Linux, MacOS</li>
-            <li>IT Hardware Support</li>
-            <li>Web Development</li>
-            <li>Software Development</li>
-          </ul>
-        </div>
-        <div class="certifications">
-          <h2>Certifications</h2>
-          <ul>
-            <li>Introduction to Computer Science</li>
-            <li>Technical Support Fundamentals</li>
-            <li>Operating Systems: Windows, Linux, MacOS</li>
-            <li>Computer Networking</li>
-            <li>IT Security Fundamentals</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Recent projects from GitHub-->
-      <section id="recent-projects" class="section">
-        <div class="container">
-          <h2 class="section-title">Recent Projects</h2>
-          <div id="recent-projects-list" class="projects-grid"></div>
-          <div class="see-all-projects"><a href="#view-works">See all projects →</a></div>
-        </div>
-      </section>
-
-      <!-- Recent Blog Posts -->
-      <section id="recent-blog" class="section">
-        <div class="container">
-          <h2 class="section-title">Recent Blog Posts</h2>
-          <div id="recent-blog-list" class="blog-grid"></div>
-          <div class="see-all-posts"><a href="#view-blog">See all posts →</a></div>
-        </div>
-      </section>
-
-      <section id="contact" class="section contact">
-        <h2>Contact Me</h2>
-        <form target="_blank" action="https://formsubmit.co/roman.mamrukov@gmail.com" method="POST">
-          <input type="text" name="name" class="form-control" placeholder="Full Name" required />
-          <input type="email" name="email" class="form-control" placeholder="Email Address" required />
-          <select id="subjectSelector" name="subject" class="form-control" required>
-            <option value="default">Subject:</option>
-            <option value="Work">Work</option>
-            <option value="Discus">Discussion</option>
-            <option value="inTouch">Get in Touch</option>
-          </select>
-          <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_autoresponse" value="your custom message" />
-          <button type="submit">Send</button>
-        </form>
-        <div class="social-links">
-          <img src="img/logos/svg/linkedin.svg" width="25" height="25" loading="lazy" decoding="async" />
-          <a href="https://www.linkedin.com/in/roman-mamrukov/">LinkedIn</a>
-          <img src="img/logos/svg/whatsapp.svg" width="25" height="25" loading="lazy" decoding="async" />
-          <a href="https://wa.me/+447367771616">WhatsApp</a>
-        </div>
-      </section>
-    </div>
-
-    <!-- VIEW 2: Works Archive -->
-    <div id="view-works" class="spa-view">
-      <section id="works-page" class="section works">
-        <div class="works-menu">
-          <h2>Projects</h2>
-          <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="web">Websites</button>
-          <button class="filter-btn" data-filter="3D">3D Graphics</button>
-          <button class="filter-btn" data-filter="games">Games</button>
-          <button class="filter-btn" data-filter="soft">Apps</button>
-        </div>
-        <div id="works-gallery" class="works-gallery">
-          <!-- Works loaded via JS from works.json -->
-        </div>
-      </section>
-    </div>
-
-    <!-- VIEW 3: Blog Archive -->
-    <div id="view-blog" class="spa-view">
-      <section id="blog-page" style="padding-top: 100px;">
-        <div class="blog-controls">
-          <input type="search" id="blog-search" placeholder="Search blog posts..." />
-          <select id="category-filter">
-            <option value="">All Categories</option>
-          </select>
-        </div>
-        <div id="blog-archive" class="blog-grid container"></div>
-      </section>
-    </div>
-
-    <!-- Footer globally inside main-content -->
-    <footer class="footer">
-      <div class="footer-content">
-        <p>&copy; <span id="copyright"></span> Romans Mamrukovs</p>
-        <ul class="footer-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#view-works">Works</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="social-links">
-          <img src="img/logos/svg/linkedin.svg" width="25" height="25" loading="lazy" decoding="async" />
-          <a href="https://www.linkedin.com/in/roman-mamrukov/">LinkedIn</a>
-          <img src="img/logos/svg/github.svg" width="25" height="25" loading="lazy" decoding="async" />
-          <a href="https://github.com/romanMamrukov/" target="_blank">GitHub</a>
-          <img src="img/logos/svg/whatsapp.svg" width="25" height="25" loading="lazy" decoding="async" />
-          <a href="https://wa.me/+37126626578">WhatsApp</a>
+  <header class="hero" id="home">
+    <aside class="identity-panel" aria-label="Roman Mamrukov profile">
+      <a class="wordmark" href="#home"><span class="wordmark-mark">RM</span><span>Roman Mamrukov</span></a>
+      <div class="portrait-wrap">
+        <div class="portrait" role="img" aria-label="Portrait of Roman Mamrukov"></div>
+        <div class="portrait-status"><span class="status-dot"></span>Riga, Latvia · Available for selected work</div>
+      </div>
+      <div class="identity-footer"><p>Technical Support Engineer<br>Product & systems builder</p><p>EN · LV · RU</p></div>
+    </aside>
+    <div class="hero-content">
+      <div class="topbar">
+        <nav aria-label="Primary navigation">
+          <a href="#work">Work</a><a href="#services">Services</a><a href="#approach">Approach</a><a href="#experience">Experience</a>
+        </nav>
+        <a class="topbar-contact" href="#contact">Start a project →</a>
+      </div>
+      <div class="hero-copy">
+        <p class="eyebrow">Engineering clarity for growing businesses</p>
+        <h1>I turn operational friction into <em>working digital systems.</em></h1>
+        <p class="hero-lede">I build reliable websites, internal tools and automation for small businesses and independent professionals—combining software delivery with production support discipline.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#work">View selected work <span>↓</span></a>
+          <a class="button button-secondary" href="mailto:roman.mamrukov@gmail.com">Discuss a project <span>↗</span></a>
         </div>
       </div>
-    </footer>
-  </div>
+      <div class="capability-strip">
+        <article class="capability"><span class="capability-index">01</span><h2>Business websites</h2><p>Fast, responsive sites built to establish trust and convert attention into qualified enquiries.</p><span class="capability-meta">Strategy · UX · Delivery</span></article>
+        <article class="capability"><span class="capability-index">02</span><h2>Operational tools</h2><p>Focused systems for invoicing, lead handling, inventory and repeatable business workflows.</p><span class="capability-meta">Product · Data · Automation</span></article>
+        <article class="capability"><span class="capability-index">03</span><h2>Technical reliability</h2><p>Support-informed implementation with deployment, maintainability and failure modes considered early.</p><span class="capability-meta">Cloud · DevOps · Support</span></article>
+      </div>
+    </div>
+  </header>
 
-  <!-- Scripts -->
-  <script src="script.js" defer></script>
-  <script>
-    document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()));
-    function enterSite() {
-      document.body.classList.add('site-entered');
-      // Fix for scrolling if needed
-    }
-  </script>
+  <main>
+    <section class="proof-band" aria-label="Working principles">
+      <p>Built around the business problem, not the framework.</p>
+      <div class="proof-list"><span>Static-first where practical</span><span>Free hosting ready</span><span>Maintainable handover</span></div>
+    </section>
+
+    <section class="work-section" id="work">
+      <div class="section-heading">
+        <div><p class="section-kicker">Selected work · 2024–2026</p><h2>Products and client systems with a practical purpose.</h2></div>
+        <p class="section-intro">The portfolio includes product experiments, reusable platforms and deployed client websites. Each project is framed by the operational problem it addresses.</p>
+      </div>
+      <div class="project-list">
+        <article class="project">
+          <div class="project-rail"><span>01</span><span>Freelance operations</span></div>
+          <div class="project-main"><div class="project-title-row"><p>Work to Income</p><span class="project-status">Active product</span></div><h3>A local-first workspace from completed work to spendable income.</h3><p class="project-description">A privacy-conscious tool for freelancers and self-employed professionals to manage work, invoicing and income without mandatory accounts or subscriptions.</p></div>
+          <div class="project-result"><p class="project-result-label">Product direction</p><p>Reduces administrative friction while keeping user data in the browser with exportable backups.</p><div class="project-links"><a href="https://romanmamrukov.github.io/work-to-income/" target="_blank" rel="noreferrer">Live product ↗</a><a href="https://github.com/romanMamrukov/work-to-income" target="_blank" rel="noreferrer">Repository ↗</a></div></div>
+        </article>
+        <article class="project">
+          <div class="project-rail"><span>02</span><span>Workflow system</span></div>
+          <div class="project-main"><div class="project-title-row"><p>Freelance IT Ops Console</p><span class="project-status">Prototype</span></div><h3>One operational view for freelance tasks and invoices.</h3><p class="project-description">A browser-based management console designed to reduce the distance between receiving work, completing it and producing an invoice.</p></div>
+          <div class="project-result"><p class="project-result-label">System value</p><p>Consolidates fragmented administration into a focused, reusable workflow.</p><div class="project-links"><a href="https://romanmamrukov.github.io/freemgsys/" target="_blank" rel="noreferrer">Live demo ↗</a><a href="https://github.com/romanMamrukov/freemgsys" target="_blank" rel="noreferrer">Repository ↗</a></div></div>
+        </article>
+        <article class="project">
+          <div class="project-rail"><span>03</span><span>Marketplace MVP</span></div>
+          <div class="project-main"><div class="project-title-row"><p>Repair Marketplace</p><span class="project-status">MVP</span></div><h3>A structured route from repair request to local specialist.</h3><p class="project-description">A marketplace concept for describing repair needs, adding context and connecting customers with suitable local providers.</p></div>
+          <div class="project-result"><p class="project-result-label">Validation asset</p><p>Built to test demand and workflow assumptions before investing in a full marketplace platform.</p><div class="project-links"><a href="https://romanmamrukov.github.io/repair-marketplace/" target="_blank" rel="noreferrer">Live demo ↗</a><a href="https://github.com/romanMamrukov/repair-marketplace" target="_blank" rel="noreferrer">Repository ↗</a></div></div>
+        </article>
+        <article class="project">
+          <div class="project-rail"><span>04</span><span>Automotive platform</span></div>
+          <div class="project-main"><div class="project-title-row"><p>Auto Repair Shop</p><span class="project-status">Reusable platform</span></div><h3>A modern sales and service presence for automotive businesses.</h3><p class="project-description">A reusable platform concept for workshops and vehicle sellers, including easy inventory publishing and responsive customer-facing pages.</p></div>
+          <div class="project-result"><p class="project-result-label">Commercial use</p><p>Designed as a repeatable foundation that can be adapted for multiple automotive clients.</p><div class="project-links"><a href="https://romanmamrukov.github.io/auto-repair-shop/" target="_blank" rel="noreferrer">Live demo ↗</a><a href="https://github.com/romanMamrukov/auto-repair-shop" target="_blank" rel="noreferrer">Repository ↗</a></div></div>
+        </article>
+        <article class="project">
+          <div class="project-rail"><span>05</span><span>Client website</span></div>
+          <div class="project-main"><div class="project-title-row"><p>Alus Bode</p><span class="project-status">Production</span></div><h3>A focused digital storefront for a Latvian drinks retailer.</h3><p class="project-description">A responsive business website that presents the brand, product offer and customer contact routes clearly.</p></div>
+          <div class="project-result"><p class="project-result-label">Delivery</p><p>A lightweight, maintainable implementation suited to reliable low-cost hosting.</p><div class="project-links"><a href="https://romanmamrukov.github.io/alusbode.lv/" target="_blank" rel="noreferrer">Live site ↗</a><a href="https://github.com/romanMamrukov/alusbode.lv" target="_blank" rel="noreferrer">Repository ↗</a></div></div>
+        </article>
+        <article class="project">
+          <div class="project-rail"><span>06</span><span>Client website</span></div>
+          <div class="project-main"><div class="project-title-row"><p>Entrega</p><span class="project-status">Production</span></div><h3>A professional company presence built for clarity and access.</h3><p class="project-description">A responsive website implementation for a Latvian business, structured around clear information and practical customer journeys.</p></div>
+          <div class="project-result"><p class="project-result-label">Delivery</p><p>Production-oriented frontend work with a maintainable static deployment model.</p><div class="project-links"><a href="https://romanmamrukov.github.io/entrega.lv/" target="_blank" rel="noreferrer">Live site ↗</a><a href="https://github.com/romanMamrukov/entrega.lv" target="_blank" rel="noreferrer">Repository ↗</a></div></div>
+        </article>
+        <article class="project">
+          <div class="project-rail"><span>07</span><span>Automation utility</span></div>
+          <div class="project-main"><div class="project-title-row"><p>QR Generator</p><span class="project-status">Utility</span></div><h3>Bulk QR generation integrated with spreadsheet workflows.</h3><p class="project-description">A Python utility that reads source data from Excel, generates QR codes and places the resulting assets back into the workbook.</p></div>
+          <div class="project-result"><p class="project-result-label">Automation value</p><p>Replaces repetitive manual asset creation with a consistent batch process.</p><div class="project-links"><a href="https://romanmamrukov.github.io/qrGenerator/" target="_blank" rel="noreferrer">Project page ↗</a><a href="https://github.com/romanMamrukov/qrGenerator" target="_blank" rel="noreferrer">Repository ↗</a></div></div>
+        </article>
+        <article class="project">
+          <div class="project-rail"><span>08</span><span>Developer tool</span></div>
+          <div class="project-main"><div class="project-title-row"><p>Web Testbench</p><span class="project-status">Tool</span></div><h3>A zero-setup browser workbench for frontend experiments.</h3><p class="project-description">Write and preview HTML, CSS and JavaScript in real time without a local development environment.</p></div>
+          <div class="project-result"><p class="project-result-label">Utility</p><p>Shortens the feedback loop for demonstrations, experiments and isolated frontend debugging.</p><div class="project-links"><a href="https://romanmamrukov.github.io/webtestbench/" target="_blank" rel="noreferrer">Live tool ↗</a><a href="https://github.com/romanMamrukov/webtestbench" target="_blank" rel="noreferrer">Repository ↗</a></div></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="approach-section" id="approach">
+      <div class="approach-statement"><p class="section-kicker section-kicker-light">How I work</p><h2>Small scope. Clear value. <em>Production discipline.</em></h2><p>Start with the highest-value workflow, validate it with real users, then extend only where evidence supports the investment.</p></div>
+      <div class="process-list">
+        <article class="process-item"><span>01</span><div><h3>Diagnose</h3><p>Map the business problem, constraints, users and current workaround before choosing technology.</p></div></article>
+        <article class="process-item"><span>02</span><div><h3>Prove</h3><p>Deliver the smallest useful version that can generate feedback, leads or measurable time savings.</p></div></article>
+        <article class="process-item"><span>03</span><div><h3>Harden</h3><p>Improve accessibility, responsive behaviour, failure handling, documentation and deployment.</p></div></article>
+        <article class="process-item"><span>04</span><div><h3>Scale</h3><p>Turn validated components into reusable systems, automation and recurring service opportunities.</p></div></article>
+      </div>
+    </section>
+
+    <section class="services-section" id="services">
+      <div class="section-heading"><div><p class="section-kicker">Ways to work together</p><h2>Focused delivery for businesses that need working systems.</h2></div><p class="section-intro">Scope and price follow the operational value and complexity. Every engagement includes a maintainable handover.</p></div>
+      <div class="offer-grid">
+        <article class="offer"><div class="offer-topline"><span>Website launch</span><span>01</span></div><h3>Credible business website</h3><p>Positioning, responsive implementation, contact journeys, deployment and a clear ownership handover.</p><span class="offer-fit">Best for local services and small businesses replacing no site or an outdated site.</span></article>
+        <article class="offer offer-featured"><div class="offer-topline"><span>Operations system</span><span>02</span></div><h3>Workflow and CRM tooling</h3><p>A focused system for leads, tasks, follow-ups, documents or another repeated operational process.</p><span class="offer-fit">Best when spreadsheets, messages and manual reminders are causing lost work.</span></article>
+        <article class="offer"><div class="offer-topline"><span>Technical delivery</span><span>03</span></div><h3>Automation and support</h3><p>Diagnosis, scripting, integrations, deployment improvements and maintainable technical solutions.</p><span class="offer-fit">Best for a defined technical bottleneck with a measurable operational cost.</span></article>
+      </div>
+    </section>
+
+    <section class="experience-section" id="experience">
+      <div class="experience-intro"><p class="section-kicker">Engineering foundation</p><h2>Delivery informed by production support.</h2><p>My work spans software support, cloud environments, systems administration, incident investigation and web product development.</p></div>
+      <div class="experience-list">
+        <article><span class="experience-date">2026—Present</span><div><h3>Technical Support Engineer · Sapiens</h3><p>Application and environment support across Java services, Azure infrastructure, Docker, Linux, observability and release operations.</p></div></article>
+        <article><span class="experience-date">2024—2026</span><div><h3>IT Helpdesk Analyst · Acolad</h3><p>Primary local IT contact supporting Microsoft 365, Entra ID, Intune, endpoint security, users and business-critical applications.</p></div></article>
+        <article><span class="experience-date">Earlier</span><div><h3>IT, web and technical operations</h3><p>Hands-on experience across support, web administration, networking, hardware, customer-facing delivery and technical leadership.</p></div></article>
+      </div>
+      <div class="toolkit"><span>Linux</span><span>Azure</span><span>Docker</span><span>Java</span><span>JavaScript</span><span>TypeScript</span><span>GitHub Actions</span><span>Automation</span><span>Observability</span><span>Technical support</span></div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <span class="contact-index">05 · Contact</span>
+      <div class="contact-main"><p class="section-kicker section-kicker-light">Start with the operational problem</p><h2>Describe what is slow, manual or losing business.</h2><p>Include the current process, who uses it and what a useful result would look like. I will respond with a practical first scope.</p><a class="contact-email" href="mailto:roman.mamrukov@gmail.com"><span>roman.mamrukov@gmail.com</span><span>↗</span></a></div>
+      <div class="contact-links"><a href="https://github.com/romanMamrukov" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/roman-mamrukov/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://wa.me/37126626578" target="_blank" rel="noreferrer">WhatsApp ↗</a></div>
+    </section>
+  </main>
+  <footer><span>© <span id="current-year">2026</span> Roman Mamrukov</span><span>Riga · Latvia</span><span>Built as a static, accessible site</span></footer>
 </body>
-
 </html>
